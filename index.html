@@ -37,14 +37,14 @@
     <h2 id="notizen"><span class="pen pen--notizen">Notizen</span></h2>
     <div class="tiles">
       <figure class="tile">
-        <img class="tile__shot" src="screenshots/schuelerliste.webp" width="760" height="1010" decoding="async" alt="Die Schülerliste, nach Wochentagen geordnet, mit Uhrzeit und dem Alter der letzten Notiz">
+        <a class="tile__open" href="screenshots/schuelerliste.webp"><img class="tile__shot" src="screenshots/schuelerliste.webp" width="760" height="1010" decoding="async" alt="Die Schülerliste, nach Wochentagen geordnet, mit Uhrzeit und dem Alter der letzten Notiz"></a>
         <figcaption>
           <h3>Stundenplan</h3>
           <p>Alle Unterrichtstage im Überblick.</p>
         </figcaption>
       </figure>
       <figure class="tile">
-        <img class="tile__shot" src="screenshots/lektion.webp" width="760" height="1010" decoding="async" alt="Die Seite einer Schülerin mit der Notiz der letzten Lektion">
+        <a class="tile__open" href="screenshots/lektion.webp"><img class="tile__shot" src="screenshots/lektion.webp" width="760" height="1010" decoding="async" alt="Die Seite einer Schülerin mit der Notiz der letzten Lektion"></a>
         <figcaption>
           <h3>Lektion</h3>
           <p>Die Notizen der letzten und aktuellen Lektion auf einen Blick.</p>
@@ -57,28 +57,28 @@
     <h2 id="noten"><span class="pen pen--noten">Noten</span></h2>
     <div class="tiles">
       <figure class="tile">
-        <img class="tile__shot" src="screenshots/stuecke.webp" width="760" height="1010" decoding="async" alt="Die Stücke, an denen eine Schülerin arbeitet, jedes mit seiner Startseite">
+        <a class="tile__open" href="screenshots/stuecke.webp"><img class="tile__shot" src="screenshots/stuecke.webp" width="760" height="1010" decoding="async" alt="Die Stücke, an denen eine Schülerin arbeitet, jedes mit seiner Startseite"></a>
         <figcaption>
           <h3>Zuteilen</h3>
           <p>Jedes Stück öffnet auf der Seite, an der die Schüler:in gerade arbeitet.</p>
         </figcaption>
       </figure>
       <figure class="tile">
-        <img class="tile__shot" src="screenshots/anmerkungen.webp" width="760" height="1010" decoding="async" alt="Anmerkungen mit dem Stift auf einer Notenseite">
+        <a class="tile__open" href="screenshots/anmerkungen.webp"><img class="tile__shot" src="screenshots/anmerkungen.webp" width="760" height="1010" decoding="async" alt="Anmerkungen mit dem Stift auf einer Notenseite"></a>
         <figcaption>
           <h3>Anmerkungen</h3>
           <p>Direkt in die Noten zeichnen, für jede Schüler:in separat gespeichert.</p>
         </figcaption>
       </figure>
       <figure class="tile">
-        <img class="tile__shot" src="screenshots/werkzeuge.webp" width="840" height="1050" decoding="async" alt="Stimmgerät und Metronom über den Noten: das Stimmgerät im Ton auf a¹, das Metronom auf 96 im Viervierteltakt">
+        <a class="tile__open" href="screenshots/werkzeuge.webp"><img class="tile__shot" src="screenshots/werkzeuge.webp" width="840" height="1050" decoding="async" alt="Stimmgerät und Metronom über den Noten: das Stimmgerät im Ton auf a¹, das Metronom auf 96 im Viervierteltakt"></a>
         <figcaption>
           <h3>Werkzeuge</h3>
           <p>Metronom, Stimmgerät und weitere nützliche Werkzeuge integriert.</p>
         </figcaption>
       </figure>
       <figure class="tile">
-        <img class="tile__shot" src="screenshots/whiteboard.webp" width="760" height="1010" decoding="async" alt="Das Whiteboard mit Notenlinien und zwei von Hand skizzierten Tonleitern mit ihren Ganz- und Halbtonschritten: D-Dur im Violinschlüssel, h-Moll im Bassschlüssel">
+        <a class="tile__open" href="screenshots/whiteboard.webp"><img class="tile__shot" src="screenshots/whiteboard.webp" width="760" height="1010" decoding="async" alt="Das Whiteboard mit Notenlinien und zwei von Hand skizzierten Tonleitern mit ihren Ganz- und Halbtonschritten: D-Dur im Violinschlüssel, h-Moll im Bassschlüssel"></a>
         <figcaption>
           <h3>Whiteboard</h3>
           <p>Platz zum Erklären und Skizzieren.</p>
@@ -119,6 +119,34 @@
   </nav>
   <p>© 2026 padago</p>
 </footer>
+
+<!-- A screenshot opened whole, over the page. Without the script, its link
+     opens the picture on its own instead. -->
+<dialog class="view" aria-label="Bildschirmfoto">
+  <form method="dialog">
+    <button class="view__close" aria-label="Schliessen">
+      <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </form>
+  <img alt="">
+</dialog>
+
+<script>
+  const view = document.querySelector(".view");
+  const whole = view.querySelector("img");
+  for (const link of document.querySelectorAll(".tile__open")) {
+    link.addEventListener("click", event => {
+      // A click for a new tab or window still gets one.
+      if (event.button || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      whole.src = link.href;
+      whole.alt = link.querySelector("img").alt;
+      view.showModal();
+    });
+  }
+  // The button, Escape, or a click anywhere closes it.
+  view.addEventListener("click", () => view.close());
+</script>
 
 </body>
 </html>

@@ -250,6 +250,58 @@ strong { color: var(--ink); font-weight: 600; }
   .tile--beside figcaption { align-self: end; margin-top: 0; padding-bottom: 12%; }
 }
 
+/* A click on a picture shows the whole screen, uncropped and unfaded, as
+   large as fits but never past its own size, on the page gone almost black.
+   A click anywhere puts it back. */
+.tile__open { display: block; cursor: zoom-in; border-radius: .75rem .75rem 0 0; }
+
+html:has(.view[open]) { overflow: hidden; }
+.view {
+  inset: 0;
+  width: auto;
+  height: auto;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: var(--gutter);
+  border: 0;
+  background: none;
+  cursor: zoom-out;
+  overscroll-behavior: contain;
+}
+.view[open] {
+  display: grid;
+  grid-template: minmax(0, 1fr) / minmax(0, 1fr);
+  place-items: center;
+}
+.view::backdrop { background: rgb(0 0 0 / .92); }
+.view img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: .75rem;
+}
+.view form { position: absolute; top: var(--gutter); right: var(--gutter); z-index: 1; }
+.view__close {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 1px solid var(--faint);
+  border-radius: 50%;
+  background: var(--bg);
+  color: var(--ink);
+  cursor: pointer;
+}
+.view__close svg { fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .view[open], .view[open]::backdrop { animation: view-in .18s ease-out; }
+}
+@keyframes view-in { from { opacity: 0; } }
+
 /* A word underlined by hand, the way a note is marked in the app: one
    stroke in the accent, even in weight with round ends, bowed a little and
    not quite steady, a little past the word at the end. Each of the two
