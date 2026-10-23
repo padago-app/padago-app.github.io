@@ -1,11 +1,124 @@
 <!doctype html>
-<html lang="de">
+<html lang="de-CH">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>padago</title>
+<title>padago – Notizen und Noten für den Instrumentalunterricht</title>
+<meta name="description" content="padago ist eine iPad-App für den Instrumentalunterricht: Schüler:innen nach Stundenplan, Notizen pro Lektion und eine Notenbibliothek, deren Stücke auf der richtigen Seite öffnen.">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+<meta property="og:title" content="padago">
+<meta property="og:description" content="Notizen und Noten für den Instrumentalunterricht. Für iPad.">
+<meta property="og:image" content="https://padago.org/logo/icon-512.png">
+<meta property="og:locale" content="de_CH">
+<link rel="icon" href="logo/favicon-64.png" sizes="64x64">
+<link rel="apple-touch-icon" href="logo/icon-180.png">
+<link rel="stylesheet" href="css/site.css">
 </head>
-<body>
-<h1>padago</h1>
+<body class="page--wide">
+
+<header class="wrap hero">
+  <h1><img src="logo/padago-wordmark-white.svg" alt="padago" width="768" height="374"></h1>
+  <p class="claim"><span class="pen pen--notizen">Notizen</span> und <span class="pen pen--noten">Noten</span> für den Instrumentalunterricht.</p>
+  <div class="get">
+    <span class="store">Bald im App Store</span>
+    <span class="req">Für iPad, ab iPadOS 17</span>
+  </div>
+</header>
+
+<main>
+  <!-- The app's two halves, in the order of its switch: each thing it does
+       under a picture of it, two to a row; one left over at the end of a
+       section has its words beside it instead. The pictures are whole
+       screens in the app's light theme, so they stand apart from the page's
+       own white on black, cropped here to the part that matters (--at moves
+       the crop down). -->
+  <section class="wrap part half" aria-labelledby="notizen">
+    <h2 id="notizen"><span class="pen pen--notizen">Notizen</span></h2>
+    <div class="tiles">
+      <figure class="tile">
+        <img class="tile__shot" src="screenshots/schuelerliste.webp" width="760" height="1010" decoding="async" alt="Die Schülerliste, nach Wochentagen geordnet, mit Uhrzeit und dem Alter der letzten Notiz">
+        <figcaption>
+          <h3>Stundenplan</h3>
+          <p>Alle Unterrichtstage im Überblick.</p>
+        </figcaption>
+      </figure>
+      <figure class="tile">
+        <img class="tile__shot" src="screenshots/lektion.webp" width="760" height="1010" decoding="async" alt="Die Seite einer Schülerin mit der Notiz der letzten Lektion">
+        <figcaption>
+          <h3>Lektion</h3>
+          <p>Die Notizen der letzten und aktuellen Lektion auf einen Blick.</p>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="wrap part half" aria-labelledby="noten">
+    <h2 id="noten"><span class="pen pen--noten">Noten</span></h2>
+    <div class="tiles">
+      <figure class="tile">
+        <img class="tile__shot" src="screenshots/stuecke.webp" width="760" height="1010" decoding="async" alt="Die Stücke, an denen eine Schülerin arbeitet, jedes mit seiner Startseite">
+        <figcaption>
+          <h3>Zuteilen</h3>
+          <p>Jedes Stück öffnet auf der Seite, an der die Schüler:in gerade arbeitet.</p>
+        </figcaption>
+      </figure>
+      <figure class="tile">
+        <img class="tile__shot" src="screenshots/anmerkungen.webp" width="760" height="1010" decoding="async" alt="Anmerkungen mit dem Stift auf einer Notenseite">
+        <figcaption>
+          <h3>Anmerkungen</h3>
+          <p>Direkt in die Noten zeichnen, für jede Schüler:in separat gespeichert.</p>
+        </figcaption>
+      </figure>
+      <figure class="tile">
+        <img class="tile__shot" src="screenshots/werkzeuge.webp" width="840" height="1050" decoding="async" alt="Stimmgerät und Metronom über den Noten: das Stimmgerät im Ton auf a¹, das Metronom auf 96 im Viervierteltakt">
+        <figcaption>
+          <h3>Werkzeuge</h3>
+          <p>Metronom, Stimmgerät und weitere nützliche Werkzeuge integriert.</p>
+        </figcaption>
+      </figure>
+      <figure class="tile">
+        <img class="tile__shot" src="screenshots/whiteboard.webp" width="760" height="1010" decoding="async" alt="Das Whiteboard mit Notenlinien und zwei von Hand skizzierten Tonleitern mit ihren Ganz- und Halbtonschritten: D-Dur im Violinschlüssel, h-Moll im Bassschlüssel">
+        <figcaption>
+          <h3>Whiteboard</h3>
+          <p>Platz zum Erklären und Skizzieren.</p>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- What holds for both halves, in smaller print after them. -->
+  <section class="wrap part facts" aria-labelledby="daten">
+    <h2 id="daten">Daten</h2>
+    <dl>
+      <div>
+        <dt>Offline</dt>
+        <dd>Läuft auch ohne Internet.</dd>
+      </div>
+      <div>
+        <dt>Speicherort</dt>
+        <dd>Auf deinem Gerät, mit optionaler Synchronisierung über deine eigene Cloud.</dd>
+      </div>
+      <div>
+        <dt>Dateien</dt>
+        <dd>Notizen in Markdown, Noten als PDF. Offen und lesbar auch ohne padago.</dd>
+      </div>
+      <div>
+        <dt>Kein Konto</dt>
+        <dd>Keine Registrierung, keine Werbung, kein Tracking.</dd>
+      </div>
+    </dl>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <nav aria-label="Weiteres">
+    <a href="anleitung/">Anleitung</a>
+    <a href="datenschutz/">Datenschutz</a>
+    <a href="mailto:info@padago.org">Kontakt</a>
+  </nav>
+  <p>© 2026 padago</p>
+</footer>
+
 </body>
 </html>

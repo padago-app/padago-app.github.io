@@ -1,0 +1,353 @@
+/* padago.org — one stylesheet for every page.
+   Black, white, two greys, one hairline, and the app's teal for what is
+   underlined by hand. */
+
+@font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/IBMPlexSans-Regular-Latin1.woff2") format("woff2"); unicode-range: U+0000, U+000D, U+0020-007E, U+00A0-00A3, U+00A4-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2013-2014, U+2018-201A, U+201C-201E, U+2020-2022, U+2026, U+2030, U+2039-203A, U+2044, U+2074, U+20AC, U+2122, U+2212, U+FB01-FB02; }
+@font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/IBMPlexSans-Regular-Latin2.woff2") format("woff2"); unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF, U+FB01-FB02; }
+@font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 600; font-display: swap; src: url("../fonts/IBMPlexSans-SemiBold-Latin1.woff2") format("woff2"); unicode-range: U+0000, U+000D, U+0020-007E, U+00A0-00A3, U+00A4-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2013-2014, U+2018-201A, U+201C-201E, U+2020-2022, U+2026, U+2030, U+2039-203A, U+2044, U+2074, U+20AC, U+2122, U+2212, U+FB01-FB02; }
+@font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 600; font-display: swap; src: url("../fonts/IBMPlexSans-SemiBold-Latin2.woff2") format("woff2"); unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF, U+FB01-FB02; }
+
+:root {
+  color-scheme: dark;
+
+  --bg: #000;            /* the logo's square */
+  --ink: #fff;           /* wordmark, headings, names */
+  --text: #a3a3a3;       /* running text, 8.3:1 on --bg */
+  --faint: #7a7a7a;      /* small print, 4.9:1 on --bg */
+  --line: #262626;       /* the one hairline */
+  --accent: #00c4d7;     /* the app's accent, as it is in the dark */
+  --edge: rgb(255 255 255 / .14);   /* round a dark screenshot on a black page */
+
+  --font: "IBM Plex Sans", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --gutter: 16px;
+  --page: 64rem;         /* the whole column */
+}
+
+@media (min-width: 48rem) {
+  :root { --gutter: 32px; }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  background: var(--bg);
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 400 1.0625rem/1.55 var(--font);
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (min-width: 48rem) {
+  body { font-size: 1.125rem; }
+}
+
+img { display: block; max-width: 100%; height: auto; }
+
+a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--faint);
+  text-decoration-thickness: 1px;
+  text-underline-offset: .2em;
+}
+a:hover { text-decoration-color: var(--ink); }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; border-radius: 2px; }
+
+h1, h2, h3 { color: var(--ink); font-weight: 600; line-height: 1.25; margin: 0; }
+strong { color: var(--ink); font-weight: 600; }
+
+.wrap {
+  max-width: var(--page);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* ---------------------------------------------------------------- start page */
+
+/* Stacked, the top of the page is centred; side by side, it goes flush left
+   with the rest of the page. */
+.hero {
+  padding-block: clamp(2rem, 6vw, 3.5rem) clamp(2.5rem, 7vw, 4.5rem);
+  text-align: center;
+}
+.hero h1 img { width: min(100%, 19rem); margin-inline: auto; }
+
+.claim {
+  color: var(--ink);
+  font-size: clamp(1.5rem, 1.1rem + 1.8vw, 2.25rem);
+  line-height: 1.2;
+  letter-spacing: -.01em;
+  max-width: 20em;
+  margin: clamp(1.75rem, 5vw, 2.5rem) auto 0;
+}
+
+/* Stacked: the button, and what it needs under it. Side by side: one row. */
+.get {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .6rem;
+  margin: 1.75rem 0 0;
+}
+
+/* Side by side, the wordmark is the grid. Its 93.5 units of height are three
+   bands: the d's stem above (29.5), the circles (34.5), the p and g below
+   (29.5). The claim stands on the foot of the circles, as the letters do, and
+   the download row ends where the p and g end. */
+@media (min-width: 52rem) {
+  .hero {
+    --wm: clamp(18rem, 36vw, 28rem);
+    display: grid;
+    grid-template-columns: var(--wm) minmax(0, 1fr);
+    grid-template-rows: calc(var(--wm) * 64 / 192) minmax(calc(var(--wm) * 29.5 / 192), auto);
+    column-gap: clamp(2.5rem, 5vw, 4rem);
+    text-align: left;
+  }
+  .hero h1 { grid-row: 1 / 3; }
+  .hero h1 img { width: var(--wm); margin-inline: 0; }
+  .claim {
+    grid-row: 1;
+    align-self: end;
+    font-size: clamp(1.75rem, .9rem + 1.9vw, 2.25rem);
+    /* The last line's baseline onto the row's foot: what Plex puts below the
+       baseline at this line height, taken back. */
+    margin: 0 0 -.225em;
+  }
+  /* Where the band below is shallower than the row, the row grows and the
+     claim keeps its baseline. */
+  .get {
+    grid-row: 2;
+    align-self: end;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: .75rem 1.25rem;
+    margin: 0;
+    padding-top: 1.25rem;
+  }
+}
+
+@supports (text-box: trim-end cap alphabetic) {
+  @media (min-width: 52rem) {
+    .claim { text-box: trim-end cap alphabetic; margin-bottom: 0; }
+  }
+}
+
+/* Until the app is live, a plain outline in place of Apple's badge, which is
+   only for apps that can be downloaded. */
+.store {
+  display: inline-block;
+  padding: .55rem 1.1rem;
+  border: 1px solid var(--faint);
+  border-radius: .5rem;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.req { color: var(--faint); font-size: .875rem; }
+
+/* A hairline as wide as the text, not as the gutters. */
+.part, .foot { position: relative; }
+.part::before, .foot::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: var(--gutter);
+  right: var(--gutter);
+  height: 1px;
+  background: var(--line);
+}
+
+.part { padding-block: clamp(3rem, 8vw, 5.5rem); }
+.part h2 {
+  font-size: clamp(1.375rem, 1.2rem + .8vw, 1.75rem);
+  margin-bottom: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+/* The app's two halves are the page's two big sections. */
+.half { padding-block: clamp(3.5rem, 10vw, 7rem); }
+.half h2 {
+  font-size: clamp(2.5rem, 1.5rem + 4vw, 4rem);
+  line-height: 1;
+  letter-spacing: -.02em;
+  margin-bottom: clamp(2.25rem, 5.5vw, 4rem);
+}
+
+/* Each thing the app does under a picture of it, two to a row, on a wider
+   page than the others. A picture is a whole screen cropped to its upper
+   part (or lower, by --at), since that is where an iPad screen keeps what
+   it is about. One left over at the end of a section keeps its size and has
+   its words in the empty half of the row beside it. */
+.page--wide { --page: 72rem; }
+
+/* The picture has no lower edge: it goes dark into the page, and its name
+   comes up out of the dark, over the last of it. So a caption belongs to
+   the picture above it, and is far from the next row. The picture needs no
+   ring either; its light is its edge. */
+.tiles {
+  --gap-x: clamp(1.5rem, 3vw, 2.5rem);
+  /* Tall enough for the middle of a screen as well as its top: a note being
+     written sits under the one it follows. */
+  --shot: 4 / 5;
+  /* How far a caption comes up over the last of its picture. */
+  --lift: clamp(1.25rem, 3.5vw, 2rem);
+  /* Eased in lightness as the eye sees it, not in the light itself: a cosine
+     from full to none, each stop's L* turned back into the alpha a mask
+     scales by. So the fade has no edge where it begins and darkens evenly.
+     And no longer than the name needs: the picture is whole until a little
+     above the name, faint by its top and out by the middle of its letters,
+     so as much of the screen shows as can while the name still reads. */
+  --fade-from: calc(100% - var(--lift) - 2rem);
+  --fade-step: calc(3.5rem / 12);
+  --fade: linear-gradient(to bottom,
+    rgb(0 0 0 / 1) var(--fade-from),
+    rgb(0 0 0 / .957) calc(var(--fade-from) + var(--fade-step)),
+    rgb(0 0 0 / .837) calc(var(--fade-from) + 2 * var(--fade-step)),
+    rgb(0 0 0 / .667) calc(var(--fade-from) + 3 * var(--fade-step)),
+    rgb(0 0 0 / .483) calc(var(--fade-from) + 4 * var(--fade-step)),
+    rgb(0 0 0 / .315) calc(var(--fade-from) + 5 * var(--fade-step)),
+    rgb(0 0 0 / .184) calc(var(--fade-from) + 6 * var(--fade-step)),
+    rgb(0 0 0 / .096) calc(var(--fade-from) + 7 * var(--fade-step)),
+    rgb(0 0 0 / .044) calc(var(--fade-from) + 8 * var(--fade-step)),
+    rgb(0 0 0 / .018) calc(var(--fade-from) + 9 * var(--fade-step)),
+    rgb(0 0 0 / .007) calc(var(--fade-from) + 10 * var(--fade-step)),
+    rgb(0 0 0 / .002) calc(var(--fade-from) + 11 * var(--fade-step)),
+    rgb(0 0 0 / 0) calc(var(--fade-from) + 12 * var(--fade-step)));
+  display: grid;
+  gap: clamp(3.5rem, 8vw, 5.5rem) var(--gap-x);
+}
+.tile { margin: 0; }
+.tile__shot {
+  width: 100%;
+  aspect-ratio: var(--shot);
+  object-fit: cover;
+  object-position: 50% var(--at, 0%);
+  border-radius: .75rem .75rem 0 0;
+  -webkit-mask-image: var(--fade);
+  mask-image: var(--fade);
+}
+.tile figcaption { position: relative; margin-top: calc(-1 * var(--lift)); }
+.tile h3 {
+  font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2.125rem);
+  letter-spacing: -.015em;
+  margin-bottom: .5rem;
+}
+.tile p { margin: 0; max-width: 30rem; }
+
+@media (min-width: 48rem) {
+  .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tile--beside {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: var(--gap-x);
+  }
+  .tile--beside figcaption { align-self: end; margin-top: 0; padding-bottom: 12%; }
+}
+
+/* A word underlined by hand, the way a note is marked in the app: one
+   stroke in the accent, even in weight with round ends, bowed a little and
+   not quite steady, a little past the word at the end. Each of the two
+   words has a stroke of its own and keeps it wherever it is underlined, so
+   the claim's Notizen and the section's Notizen are the same gesture. The
+   stroke is a mask, so its colour stays a token. */
+.pen { position: relative; white-space: nowrap; }
+.pen::after {
+  content: "";
+  position: absolute;
+  left: -.03em;
+  right: -.08em;
+  bottom: -.15em;
+  height: .38em;
+  background: var(--accent);
+  -webkit-mask: var(--stroke) center / 100% 100% no-repeat;
+  mask: var(--stroke) center / 100% 100% no-repeat;
+  pointer-events: none;
+}
+.pen--notizen {
+  --stroke: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 12' preserveAspectRatio='none'%3E%3Cpath d='M2.06 7.61L3.58 7.53L5.14 7.44L6.73 7.36L8.35 7.28L10.01 7.2L11.71 7.12L13.44 7.04L15.19 6.96L16.98 6.88L18.8 6.8L20.65 6.72L22.53 6.65L24.43 6.57L26.36 6.49L28.31 6.42L30.29 6.35L32.28 6.28L34.31 6.21L36.35 6.15L38.41 6.09L40.49 6.04L42.59 5.99L44.7 5.95L46.83 5.92L48.98 5.89L51.14 5.86L53.31 5.85L55.5 5.84L57.7 5.85L59.91 5.85L62.13 5.87L64.35 5.9L66.59 5.93L68.83 5.97L71.07 6.02L73.33 6.08L75.58 6.14L77.84 6.21L80.1 6.29L82.37 6.37L84.63 6.45L86.89 6.55L89.15 6.64L91.41 6.74L93.66 6.85L95.91 6.95L98.15 7.07L100.39 7.18L102.62 7.29L104.84 7.41L107.05 7.53L109.25 7.65L111.44 7.78L113.62 7.91L115.78 8.04L117.93 8.17L118.37 8.11L118.76 7.88L119.03 7.53L119.15 7.09L119.09 6.65L118.86 6.26L118.5 5.99L118.07 5.87L115.92 5.74L113.75 5.61L111.57 5.48L109.38 5.36L107.18 5.23L104.96 5.11L102.74 5L100.51 4.88L98.27 4.77L96.02 4.66L93.77 4.55L91.51 4.45L89.25 4.35L86.99 4.25L84.72 4.16L82.45 4.07L80.18 3.99L77.92 3.91L75.65 3.84L73.39 3.78L71.13 3.72L68.87 3.67L66.62 3.63L64.38 3.6L62.15 3.57L59.92 3.55L57.7 3.55L55.5 3.54L53.3 3.55L51.12 3.56L48.95 3.59L46.8 3.62L44.66 3.65L42.54 3.69L40.43 3.74L38.35 3.79L36.28 3.85L34.23 3.91L32.21 3.98L30.2 4.05L28.22 4.12L26.27 4.19L24.34 4.27L22.43 4.35L20.55 4.43L18.7 4.5L16.88 4.58L15.09 4.66L13.33 4.74L11.6 4.82L9.9 4.9L8.24 4.98L6.61 5.06L5.01 5.15L3.46 5.23L1.94 5.31L1.5 5.43L1.14 5.7L0.91 6.08L0.85 6.53L0.96 6.96L1.23 7.32L1.62 7.55Z'/%3E%3C/svg%3E");
+}
+.pen--noten {
+  --stroke: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 12' preserveAspectRatio='none'%3E%3Cpath d='M2.05 7.3L4.1 7.21L6.16 7.12L8.24 7.02L10.34 6.93L12.45 6.83L14.57 6.74L16.71 6.65L18.86 6.57L21.02 6.49L23.19 6.41L25.38 6.33L27.56 6.27L29.76 6.2L31.97 6.15L34.17 6.1L36.39 6.05L38.61 6.02L40.83 5.99L43.05 5.97L45.27 5.96L47.49 5.95L49.72 5.95L51.94 5.96L54.15 5.97L56.37 6L58.58 6.02L60.78 6.06L62.98 6.09L65.17 6.14L67.35 6.18L69.52 6.24L71.68 6.29L73.84 6.35L75.97 6.41L78.1 6.47L80.21 6.53L82.31 6.6L84.39 6.66L86.45 6.73L88.49 6.8L90.52 6.87L92.52 6.94L94.5 7.01L96.47 7.08L98.4 7.16L100.32 7.24L102.21 7.32L104.07 7.41L105.9 7.5L107.71 7.6L109.49 7.7L111.23 7.81L112.95 7.92L114.63 8.04L116.28 8.17L117.9 8.31L118.35 8.26L118.74 8.05L119.02 7.69L119.15 7.26L119.1 6.82L118.88 6.42L118.53 6.14L118.1 6.02L116.47 5.88L114.8 5.75L113.11 5.63L111.38 5.51L109.62 5.4L107.83 5.3L106.02 5.2L104.18 5.11L102.31 5.03L100.42 4.94L98.5 4.86L96.55 4.79L94.59 4.71L92.6 4.64L90.6 4.57L88.57 4.5L86.52 4.43L84.46 4.36L82.38 4.3L80.28 4.23L78.17 4.17L76.04 4.11L73.9 4.05L71.74 3.99L69.58 3.94L67.4 3.89L65.22 3.84L63.02 3.79L60.82 3.76L58.61 3.72L56.39 3.7L54.17 3.67L51.95 3.66L49.72 3.65L47.49 3.65L45.26 3.66L43.03 3.67L40.8 3.69L38.57 3.72L36.35 3.75L34.13 3.8L31.91 3.85L29.7 3.9L27.5 3.97L25.3 4.04L23.11 4.11L20.94 4.19L18.77 4.27L16.62 4.36L14.48 4.45L12.35 4.54L10.23 4.63L8.14 4.72L6.06 4.82L3.99 4.91L1.95 5.01L1.51 5.11L1.15 5.38L0.92 5.76L0.85 6.21L0.96 6.64L1.23 7.01L1.61 7.24Z'/%3E%3C/svg%3E");
+}
+
+/* What holds for both halves, after them and in a smaller hand: four short
+   columns once they fit. */
+.facts h2 {
+  font-size: clamp(1.75rem, 1.3rem + 1.8vw, 2.5rem);
+  line-height: 1.1;
+  letter-spacing: -.02em;
+  margin-bottom: clamp(1.75rem, 4vw, 2.75rem);
+}
+.facts dl { margin: 0; display: grid; gap: 1.5rem 2rem; max-width: 52rem; }
+.facts dt { color: var(--ink); font-weight: 600; }
+.facts dd { margin: .25rem 0 0; font-size: 1rem; }
+
+@media (min-width: 40rem) {
+  .facts dl { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 64rem) {
+  .facts dl { grid-template-columns: repeat(4, minmax(0, 1fr)); max-width: none; }
+}
+
+/* ---------------------------------------------------------------- subpages */
+
+.top { padding-block: 1.5rem; }
+.top a { display: inline-block; }
+.top img { width: 6rem; }
+
+.prose { max-width: 38rem; padding-block: clamp(2.5rem, 7vw, 4.5rem) clamp(3rem, 8vw, 5.5rem); }
+.prose h1 { font-size: clamp(1.75rem, 1.4rem + 1.4vw, 2.25rem); letter-spacing: -.01em; }
+.prose h2 { font-size: 1.25rem; margin-top: 3rem; scroll-margin-top: 1.5rem; }
+.prose h3 { font-size: 1em; margin-top: 2rem; scroll-margin-top: 1.5rem; }
+.prose h2 + h3 { margin-top: 1.25rem; }
+.prose p, .prose ul { margin: .75em 0 0; }
+.prose ul { padding-left: 1.2em; }
+.prose li + li { margin-top: .35em; }
+.prose .lead { color: var(--ink); }
+
+.stand { color: var(--faint); font-size: .875rem; margin-top: .5rem; }
+
+/* What is not written yet says so, quietly. */
+.todo { color: var(--faint); }
+
+/* The Anleitung: chapters down the side once there is room for them. */
+.docs { display: grid; gap: 0 4rem; }
+.docs .prose { padding-top: 0; }
+.toc { padding-block: clamp(2.5rem, 7vw, 4.5rem) 2.5rem; font-size: .9375rem; }
+.toc h2 { font-size: .875rem; color: var(--faint); font-weight: 400; margin-bottom: .75rem; }
+.toc ol { list-style: none; margin: 0; padding: 0; counter-reset: ch; }
+.toc li { counter-increment: ch; padding-block: .2rem; display: flex; }
+.toc li::before { content: counter(ch); flex: none; width: 1.75em; color: var(--faint); font-variant-numeric: tabular-nums; }
+.toc a { color: var(--text); text-decoration: none; }
+.toc a:hover { color: var(--ink); }
+
+.doc { counter-reset: ch; }
+.doc > section > h2 { counter-increment: ch; }
+.doc > section > h2::before { content: counter(ch); display: inline-block; min-width: 1.75em; color: var(--faint); font-weight: 400; }
+
+@media (min-width: 60rem) {
+  .docs { grid-template-columns: 13rem minmax(0, 1fr); }
+  .docs .prose { padding-top: clamp(2.5rem, 7vw, 4.5rem); }
+  .toc { position: sticky; top: 0; align-self: start; max-height: 100vh; overflow-y: auto; }
+}
+
+/* ---------------------------------------------------------------- foot */
+
+.foot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: .75rem 2rem;
+  padding-block: 2.5rem 3rem;
+  color: var(--faint);
+  font-size: .875rem;
+}
+.foot nav { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; }
+.foot a { color: var(--text); }
+.foot p { margin: 0; }
