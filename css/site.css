@@ -444,6 +444,9 @@ html:has(.view[open]) { overflow: hidden; }
 .doc h3 { font-size: 1.25rem; margin-top: 0; }
 .doc h4 { font-size: 1em; margin-top: 2rem; }
 .doc h3 + h4 { margin-top: 1.25rem; }
+/* A section without chapters is a page of its own; its headings are its
+   topics, and look it. */
+.doc > section > h3 { font-size: 1em; margin-top: 2rem; }
 .doc section > section { margin-top: 1.5rem; }
 .doc :is(h2, h3, h4) { scroll-margin-top: 1.5rem; }
 /* Where a link into another chapter leaves the focus, not a thing to tap. */
@@ -491,6 +494,20 @@ html:has(.view[open]) { overflow: hidden; }
   stroke-linecap: round;
   stroke-linejoin: round;
   color: var(--ink);
+}
+
+/* A button, a menu's entry or a setting of the app named by its word, in
+   white as its icons are, so it too reads as the thing to tap. */
+.ui { color: var(--ink); }
+
+/* The app's main switch in the line of text, cut from a screenshot and
+   rounded as the switch is, so the bar around it falls away. */
+.pivot {
+  display: inline-block;
+  width: auto;
+  height: 1.6em;
+  vertical-align: -.5em;
+  border-radius: 999px;
 }
 
 /* A screenshot in the Anleitung, the width of the text. A tall screen is
