@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Anleitung – padago</title>
-<meta name="description" content="Wie padago funktioniert: Einrichten, Schülerliste, Notizen, Notenbibliothek, Notenviewer und mehr.">
+<meta name="description" content="Wie padago funktioniert: Schülerliste, Notizen, Notenbibliothek, Notenviewer und mehr.">
 <meta name="theme-color" content="#000000">
 <meta name="color-scheme" content="dark">
 <link rel="icon" href="../logo/favicon-64.png" sizes="64x64">
@@ -12,6 +12,54 @@
 <link rel="stylesheet" href="../css/site.css">
 </head>
 <body>
+
+<!-- The app's own icons, as the text names its buttons by them: copied by
+     hand from the sprite in padago/public/index.html. -->
+<svg hidden aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 4v16M4 12h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6.3 6.3 17.7 17.7M17.7 6.3 6.3 17.7"/></symbol>
+  <symbol id="i-more" viewBox="0 0 24 24">
+    <circle cx="5.3" cy="12" r="1.55" fill="currentColor" stroke="none"/>
+    <circle cx="12" cy="12" r="1.55" fill="currentColor" stroke="none"/>
+    <circle cx="18.7" cy="12" r="1.55" fill="currentColor" stroke="none"/>
+  </symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.8"/><path d="M12 6.8V12l3.8 2.2"/></symbol>
+  <symbol id="i-today" viewBox="0 0 24 24">
+    <path d="M5.6 5.2h12.8a2.2 2.2 0 0 1 2.2 2.2v11a2.2 2.2 0 0 1-2.2 2.2H5.6a2.2 2.2 0 0 1-2.2-2.2v-11a2.2 2.2 0 0 1 2.2-2.2zM3.4 9.8h17.2M8.2 3.4v3.6M15.8 3.4v3.6"/>
+    <circle cx="12" cy="15.4" r="1.6" fill="currentColor" stroke="none"/>
+  </symbol>
+  <symbol id="i-sort" viewBox="0 0 24 24">
+    <path d="M4 6.6h9M4 12h6.4M4 17.4h3.8"/>
+    <path d="M17.6 5.2v13.6M14.4 15.6l3.2 3.2 3.2-3.2"/>
+  </symbol>
+  <symbol id="i-pencil" viewBox="0 0 24 24">
+    <path d="M4 20l.9-3.9L15.5 5.5a1.8 1.8 0 0 1 2.5 0l1.4 1.4a1.8 1.8 0 0 1 0 2.5L8.8 20.1l-3.9.9zM14.3 6.7 17.7 10.1"/>
+  </symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24">
+    <path d="M4.4 6.4h15.2M9.4 6.4V4.6a1 1 0 0 1 1-1h3.2a1 1 0 0 1 1 1v1.8M6.6 6.4l.85 12.1a1.7 1.7 0 0 0 1.7 1.6h5.7a1.7 1.7 0 0 0 1.7-1.6L17.4 6.4"/>
+  </symbol>
+  <symbol id="i-unarchive" viewBox="0 0 24 24">
+    <path d="M4.6 3.6h14.8a1.4 1.4 0 0 1 1.4 1.4v1.6a1.4 1.4 0 0 1-1.4 1.4H4.6a1.4 1.4 0 0 1-1.4-1.4V5a1.4 1.4 0 0 1 1.4-1.4zM4.6 8v10.6a1.8 1.8 0 0 0 1.8 1.8h11.2a1.8 1.8 0 0 0 1.8-1.8V8"/>
+    <path d="M12 17.4v-6M9.4 14 12 11.4 14.6 14"/>
+  </symbol>
+  <symbol id="i-import" viewBox="0 0 24 24">
+    <path d="M12 3v10.4M8.6 10 12 13.4l3.4-3.4"/>
+    <path d="M8 6.6H5.8a2 2 0 0 0-2 2v9.6a2 2 0 0 0 2 2h12.4a2 2 0 0 0 2-2V8.6a2 2 0 0 0-2-2H16"/>
+  </symbol>
+  <symbol id="i-undo" viewBox="0 0 24 24">
+    <path d="M4.2 9.6h9.4a5.3 5.3 0 0 1 0 10.6H8.6M8 4.8 3.2 9.6 8 14.4"/>
+  </symbol>
+  <symbol id="i-redo" viewBox="0 0 24 24">
+    <path d="M19.8 9.6h-9.4a5.3 5.3 0 0 0 0 10.6h5M16 4.8l4.8 4.8-4.8 4.8"/>
+  </symbol>
+  <symbol id="i-reset" viewBox="0 0 24 24">
+    <path d="M4.4 5v14"/>
+    <path d="M20 12H9.2M13.8 7.6 9.2 12l4.6 4.4"/>
+  </symbol>
+  <symbol id="i-full" viewBox="0 0 24 24">
+    <path d="M9 3.8H5.8a2 2 0 0 0-2 2V9M15 3.8h3.2a2 2 0 0 1 2 2V9M9 20.2H5.8a2 2 0 0 1-2-2V15M15 20.2h3.2a2 2 0 0 0 2-2V15"/>
+  </symbol>
+</svg>
 
 <header class="wrap top">
   <a href="../"><img src="../logo/padago-wordmark-white.svg" alt="padago, zur Startseite" width="768" height="374"></a>
@@ -21,62 +69,206 @@
   <nav class="toc" aria-labelledby="inhalt">
     <h2 id="inhalt">Inhalt</h2>
     <ol>
-        <li><a href="#einrichten">Einrichten</a></li>
+        <li><a href="#einleitung">Einleitung</a></li>
         <li><a href="#schuelerliste">Schülerliste</a></li>
         <li><a href="#notizen">Notizen</a></li>
         <li><a href="#notenbibliothek">Notenbibliothek</a></li>
         <li><a href="#notenviewer">Notenviewer</a></li>
         <li><a href="#anmerkungen">Anmerkungen</a></li>
         <li><a href="#werkzeuge">Werkzeuge</a></li>
-        <li><a href="#live">Live</a></li>
         <li><a href="#einstellungen">Einstellungen</a></li>
-        <li><a href="#offline">Offline und Synchronisation</a></li>
         <li><a href="#dateien">Die Dateien ausserhalb von padago</a></li>
-        <li><a href="#hilfe">Hilfe</a></li>
+        <li><a href="#synchronisation">Synchronisation</a></li>
+        <li><a href="#live">Live</a></li>
     </ol>
   </nav>
 
   <article class="prose">
     <h1>Anleitung</h1>
-    <p class="lead">Diese Anleitung entsteht gerade. Fragen beantwortet <a href="mailto:info@padago.org">info@padago.org</a>.</p>
+    <p class="lead">Diese Anleitung entsteht gerade.</p>
 
     <div class="doc">
-      <section aria-labelledby="einrichten">
-        <h2 id="einrichten">Einrichten</h2>
-        <h3 id="voraussetzungen">Was padago braucht</h3>
-        <p class="todo">Folgt.</p>
-        <h3 id="speicherort">Speicherort: iPad oder Nextcloud</h3>
-        <p class="todo">Folgt.</p>
-        <h3 id="nextcloud">Nextcloud verbinden</h3>
-        <p class="todo">Folgt.</p>
+      <section aria-labelledby="einleitung">
+        <h2 id="einleitung">Einleitung</h2>
+        <h3 id="geraete">Unterstützte Geräte</h3>
+        <ul>
+          <li>iPad mit iPadOS 17 oder neuer</li>
+        </ul>
         <h3 id="ordner">Der Ordner Padago</h3>
-        <p class="todo">Folgt.</p>
+        <p>Alle Daten werden in einem Ordner auf dem iPad gespeichert, in der Dateien-App unter «Auf meinem iPad» › «padago» › «Padago». Dieser Ordner kann jederzeit aus padago heraus angezeigt werden: «Einstellungen» › «Speicher» › «In Dateien zeigen».</p>
+        <p>Darin liegen zwei Unterordner:</p>
+        <ul>
+          <li><strong>Noten</strong>: die Notenbibliothek, als PDF-Dateien, beliebig in Unterordner geordnet.</li>
+          <li><strong>Notizen</strong>: ein Ordner pro Schüler:in mit den Notizen, den zugeordneten Stücken und den Anmerkungen. Dazu «Persönlich» für die persönlichen Notizen und «archiv» für archivierte Schüler:innen.</li>
+        </ul>
+        <p>Es sind gewöhnliche Dateien, lesbar auch ohne padago (siehe <a href="#dateien">Die Dateien ausserhalb von padago</a>).</p>
       </section>
 
       <section aria-labelledby="schuelerliste">
         <h2 id="schuelerliste">Schülerliste</h2>
+        <p>Die Schülerliste ist der Stundenplan: Alle Schüler:innen stehen unter ihrem Unterrichtstag, nach Uhrzeit geordnet. Rechts steht, wann die letzte Notiz verfasst wurde. Ein Tippen auf den Namen öffnet die Seite der Schüler:in.</p>
+        <figure class="shot shot--crop">
+          <a href="../screenshots/schuelerliste.webp"><img src="../screenshots/schuelerliste.webp" width="1520" height="2020" loading="lazy" decoding="async" alt="Die Schülerliste, nach Wochentagen geordnet, mit Uhrzeit und dem Alter der letzten Notiz; die laufende Lektion ist umrandet"></a>
+        </figure>
+        <ul>
+          <li>Die laufende Lektion ist farbig umrandet.</li>
+          <li>Ein Tippen auf einen Wochentag klappt ihn zu oder auf.</li>
+          <li>Ein Tippen auf <svg class="ico" role="img" aria-label="Kalender"><use href="#i-today"/></svg> im Suchfeld zeigt nur den heutigen Tag.</li>
+          <li>Mittels <svg class="ico" role="img" aria-label="Sortieren"><use href="#i-sort"/></svg> im Suchfeld kann die Liste nach Stundenplan oder alphabetisch sortiert werden.</li>
+          <li>Ein Tippen auf <svg class="ico" role="img" aria-label="Uhr"><use href="#i-clock"/></svg> oben öffnet die laufende oder als nächstes folgende Lektion.</li>
+        </ul>
+
         <h3 id="hinzufuegen">Schüler:innen hinzufügen</h3>
-        <p class="todo">Folgt.</p>
-        <h3 id="termine">Tag, Uhrzeit und Dauer</h3>
-        <p class="todo">Folgt.</p>
+        <p>Ein Tippen auf <svg class="ico" role="img" aria-label="Plus"><use href="#i-plus"/></svg> oben öffnet «Schüler:in hinzufügen». Nötig ist nur der Name.</p>
+        <figure class="shot shot--crop" style="--at: 50%">
+          <a href="../screenshots/hinzufuegen.webp"><img src="../screenshots/hinzufuegen.webp" width="1520" height="2020" loading="lazy" decoding="async" alt="Das Fenster «Schüler:in hinzufügen» mit Name, Tag, Uhrzeit und Dauer über der Schülerliste"></a>
+        </figure>
+        <ul>
+          <li>Mit <svg class="ico" role="img" aria-label="Plus"><use href="#i-plus"/></svg> neben der Dauer lässt sich ein weiterer Termin hinzufügen, für Schüler:innen, die mehrmals pro Woche kommen.</li>
+          <li>«Hinzufügen und fertig» schliesst das Fenster.</li>
+          <li>«Hinzufügen und weiter» lässt es offen für die nächste Schüler:in. Die Uhrzeit rückt dabei um die Dauer weiter.</li>
+        </ul>
+
         <h3 id="bearbeiten">Liste bearbeiten</h3>
-        <p class="todo">Folgt.</p>
+        <p>Ein Tippen auf <svg class="ico" role="img" aria-label="Stift"><use href="#i-pencil"/></svg> oben öffnet die Liste zum Bearbeiten. Jede Zeile ist ein Termin: Tag, Uhrzeit, Name und Dauer lassen sich direkt antippen und ändern. Mit <svg class="ico" role="img" aria-label="Mehr"><use href="#i-more"/></svg> am Ende der Zeile lassen sich Termine hinzufügen oder entfernen sowie Schüler:innen archivieren oder löschen.</p>
+        <figure class="shot shot--crop" style="--shot: 1 / 1">
+          <a href="../screenshots/bearbeiten.webp"><img src="../screenshots/bearbeiten.webp" width="1520" height="2020" loading="lazy" decoding="async" alt="Die Liste beim Bearbeiten: geänderte Werte umrandet, eine Schülerin zum Löschen markiert, das Menü einer Zeile offen"></a>
+        </figure>
+        <ul>
+          <li>Geänderte Werte sind farbig umrandet.</li>
+          <li>Gespeichert wird erst mit «Speichern». <svg class="ico" role="img" aria-label="Kreuz"><use href="#i-close"/></svg> verwirft alle Änderungen und beendet das Bearbeiten. Mit <svg class="ico" role="img" aria-label="Rückgängig"><use href="#i-undo"/></svg> und <svg class="ico" role="img" aria-label="Wiederherstellen"><use href="#i-redo"/></svg> lassen sich einzelne Schritte rückgängig machen und wiederherstellen, mit <svg class="ico" role="img" aria-label="Zurücksetzen"><use href="#i-reset"/></svg> alle Änderungen auf einmal zurücksetzen.</li>
+          <li>Ein neuer Name benennt auch den Ordner der Schüler:in um.</li>
+          <li>«Löschen» entfernt die Schüler:in mit allen Notizen. «Archivieren» entfernt sie aus dem Stundenplan, behält aber alle Dateien (siehe <a href="#archiv">Archiv</a>).</li>
+        </ul>
+
         <h3 id="stundenplaner">Stundenplaner</h3>
-        <p class="todo">Folgt.</p>
+        <p>Der Stundenplaner (<svg class="ico" role="img" aria-label="Mehr"><use href="#i-more"/></svg> › «Stundenplaner») erleichtert die Planung sowie grosse Veränderungen am Stundenplan.</p>
+        <figure class="shot shot--crop" style="--shot: 3 / 2">
+          <a href="../screenshots/stundenplaner.webp"><img src="../screenshots/stundenplaner.webp" width="2020" height="1520" loading="lazy" decoding="async" alt="Der Stundenplaner beim Einteilen: am Dienstag vier Lektionen und darunter der gewählte Platz um 14:15, am Donnerstag drei Lektionen und «+ weiter», unten die noch nicht eingeteilten Schüler:innen"></a>
+        </figure>
+        <ul>
+          <li>Im oberen Teil befindet sich die Einteilung, während im unteren Teil alle noch nicht eingeteilten Schüler:innen aufgelistet sind.</li>
+          <li>Um eine Schüler:in einzuteilen, wähle erst einen Platz im Stundenplan: «+ Beginn» am Anfang eines Tages, «+ weiter» an seinem Ende oder «+ Tag» für einen neuen Unterrichtstag. Die Uhrzeit des gewählten Platzes lässt sich antippen, um sie zu ändern. Tippe dann unten auf die gewünschte Schüler:in, um sie diesem Platz zuzuteilen. Der gewählte Platz rückt automatisch um ihre Dauer weiter, bereit für die nächste Schüler:in.</li>
+          <li>Schüler:innen lassen sich auch an einen freien Platz ziehen. Auf eine bestehende Lektion gezogen, wird diese Zeit von beiden Schüler:innen besetzt, etwa für wöchentlich abwechselnden Unterricht.</li>
+          <li>Eine von Hand geänderte Uhrzeit bleibt, wo sie ist. Überschneidungen sind erlaubt und rot markiert.</li>
+          <li>Mit langem Drücken auf eine Schüler:in in der Liste unten lässt sich diese bearbeiten (Dauer, Termine pro Woche) sowie archivieren oder löschen.</li>
+          <li>Mit <svg class="ico" role="img" aria-label="Plus"><use href="#i-plus"/></svg> lassen sich neue Schüler:innen hinzufügen.</li>
+          <li>Gespeichert wird erst mit «Speichern». <svg class="ico" role="img" aria-label="Kreuz"><use href="#i-close"/></svg> verwirft alle Änderungen und schliesst den Stundenplaner. Mit <svg class="ico" role="img" aria-label="Rückgängig"><use href="#i-undo"/></svg> und <svg class="ico" role="img" aria-label="Wiederherstellen"><use href="#i-redo"/></svg> lassen sich einzelne Schritte rückgängig machen und wiederherstellen, mit <svg class="ico" role="img" aria-label="Zurücksetzen"><use href="#i-reset"/></svg> alle vorgenommenen Änderungen auf einmal zurücksetzen.</li>
+          <li>Mittels <svg class="ico" role="img" aria-label="Papierkorb"><use href="#i-trash"/></svg> lässt sich der Stundenplan leeren, etwa für ein neues Schuljahr. Alle Schüler:innen kommen dann zurück in die Liste unten.</li>
+        </ul>
+
+        <h3 id="stundenplan-importieren">Stundenplan importieren</h3>
+        <p>Ein bestehender Stundenplan lässt sich importieren, etwa eine Liste der Schule oder eine eigene Tabelle. Er wird direkt auf dem iPad gelesen, die Datei verlässt das Gerät nicht.</p>
+        <figure class="shot shot--crop" style="--shot: 3 / 2">
+          <a href="../screenshots/importieren.webp"><img src="../screenshots/importieren.webp" width="2020" height="1520" loading="lazy" decoding="async" alt="Ein importierter Stundenplan von Dienstag bis Donnerstag, zwei Lektionen rot umrandet zum Prüfen; oben die Zusammenfassung «Stundenplan 2026-27.docx: 14 Termine, 2 zum Prüfen markiert, 1 neu», unten zwei Schüler:innen, die im Dokument fehlen"></a>
+        </figure>
+        <ol>
+          <li>Im Stundenplaner auf <svg class="ico" role="img" aria-label="Importieren"><use href="#i-import"/></svg> tippen.</li>
+          <li>«Datei» wählen oder «Text einfügen».</li>
+          <li>Die bestehende Einteilung wird durch den gefundenen Stundenplan ersetzt.</li>
+          <li>Die rot umrandeten Lektionen prüfen.</li>
+          <li>Mit «Speichern» übernehmen.</li>
+        </ol>
+        <ul>
+          <li>Rot markiert wird, was nicht sicher erkannt werden konnte: Namen, die nur fast mit bereits bestehenden Schüler:innen übereinstimmen, beim Import neu hinzugefügte Schüler:innen oder eine unklare Uhrzeit. Mittels Tippen auf eine markierte Schüler:in lässt sich diese überprüfen und gegebenenfalls anpassen.</li>
+          <li>Bisherige Schüler:innen, die im importierten Stundenplan nicht vorkommen, bleiben in der Liste und lassen sich von Hand einteilen oder entfernen.</li>
+          <li>Erkannt werden die üblichen Schreibweisen, als Liste oder als Tabelle:
+          <div class="samples">
+            <pre>Mo. 14:00–14:45 Fanny Farrenc
+14.45 Béla Boulanger, 30 min
+Dienstag
+14 Uhr Clara von Bingen
+14h45 Claude Chaminade</pre>
+            <table>
+              <thead><tr><td></td><th scope="col">Montag</th><th scope="col">Dienstag</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">14:00</th><td>Fanny Farrenc</td><td>Clara von Bingen</td></tr>
+                <tr><th scope="row">14:45</th><td>Béla Boulanger</td><td>Claude Chaminade</td></tr>
+              </tbody>
+            </table>
+          </div>
+          </li>
+          <li>Unterstützte Dateien: .docx, .xlsx, .odt, .ods, .pdf (nicht gescannt), .rtf, .html, .csv, .txt</li>
+        </ul>
+
         <h3 id="archiv">Archiv</h3>
-        <p class="todo">Folgt.</p>
+        <p>Inaktive Schüler:innen können archiviert statt gelöscht werden, um ihre Notizen und Dateien zu erhalten. Notizen, Stücke und Termine bleiben somit im <a href="#ordner">Ordner Padago</a> gespeichert.</p>
+        <figure class="shot shot--crop" style="--shot: 16 / 9">
+          <a href="../screenshots/archiv.webp"><img src="../screenshots/archiv.webp" width="2020" height="1520" loading="lazy" decoding="async" alt="Das Archiv mit vier Schüler:innen, eine aufgeklappt mit Anzahl Notizen, ihren Stücken und ihrem Termin"></a>
+        </figure>
+        <ul>
+          <li>Das Archiv kann über den Link «Archiv ›» unter der Schülerliste aufgerufen werden.</li>
+          <li>Ein Tippen auf den Namen zeigt eine Zusammenfassung der Daten zu dieser Schüler:in.</li>
+          <li>Mit <svg class="ico" role="img" aria-label="Zurückholen"><use href="#i-unarchive"/></svg> kann die Schüler:in zurückgeholt werden.</li>
+          <li>Mit <svg class="ico" role="img" aria-label="Papierkorb"><use href="#i-trash"/></svg> kann die Schüler:in endgültig gelöscht werden.</li>
+        </ul>
       </section>
 
       <section aria-labelledby="notizen">
         <h2 id="notizen">Notizen</h2>
+        <h3 id="seite">Die Seite einer Schüler:in</h3>
+        <p>Ein Tippen auf eine Schüler:in in der Schülerliste öffnet ihre Übersichtsseite.</p>
+        <figure class="shot shot--crop">
+          <a href="../screenshots/lektionen.webp"><img src="../screenshots/lektionen.webp" width="1520" height="2020" loading="lazy" decoding="async" alt="Die Seite einer Schülerin vor der Lektion: oben ihr Name mit Tag und Uhrzeit, darunter die vorherige und die nächste Schüler:in, «Notizen» und «Noten», die Notiz der letzten Lektion und die Knöpfe «+ Di 11.5.21», «+ Anderes Datum» und «Alle Notizen ›»"></a>
+        </figure>
+        <ul>
+          <li>An der Lektions-Fortschrittsanzeige unter der Werkzeugleiste kann während der Lektion abgelesen werden, wie viel Zeit bereits vergangen ist. Sie erscheint nur, wenn für den Termin eine Dauer eingetragen ist, und lässt sich unter <a href="#allgemein">Einstellungen › Allgemein</a> ausschalten.</li>
+          <li>Mit den Namen oben links und rechts kann direkt zur vorigen oder nächsten Schüler:in im Stundenplan navigiert werden.</li>
+          <li>«Notizen» zeigt die Notizen zu den Lektionen, «Noten» die der Schüler:in zugeordneten Stücke (siehe <a href="#zuordnen">Stücke zuordnen</a>).</li>
+        </ul>
+
         <h3 id="lektionen">Letzte und nächste Lektion</h3>
-        <p class="todo">Folgt.</p>
-        <h3 id="editor">Schreiben und formatieren</h3>
-        <p class="todo">Folgt.</p>
+        <p>Unter «Notizen» steht zuoberst die Notiz der letzten Lektion. So ist auf einen Blick ersichtlich, woran zuletzt gearbeitet wurde.</p>
+        <ul>
+          <li>Ein Tippen auf «+ Di 11.5.21» erstellt die Notiz für die nächste Lektion gemäss Stundenplan, für die noch keine Notiz existiert.</li>
+          <li>Mit «+ Anderes Datum» lässt sich eine Notiz für ein beliebiges Datum erstellen, zum Beispiel um eine Lektion nachzutragen.</li>
+          <li>«Alle Notizen ›» zeigt alle bisherigen Notizen der Schüler:in.</li>
+        </ul>
+        <p>Sobald es eine Notiz für heute gibt, erscheint sie unter der letzten Lektion als «Aktuelle Lektion».</p>
+        <figure class="shot">
+          <a href="../screenshots/aktuelle-lektion.webp"><img src="../screenshots/aktuelle-lektion.webp" width="1520" height="2020" loading="lazy" decoding="async" alt="Die Seite derselben Schülerin mit der Notiz von heute: unter der letzten Lektion die aktuelle Lektion mit Tonleiter, Stücken und zwei Hausaufgaben zum Abhaken"></a>
+        </figure>
+        <ul>
+          <li>Mit <svg class="ico" role="img" aria-label="Stift"><use href="#i-pencil"/></svg> lässt sich eine Notiz bearbeiten, mit <svg class="ico" role="img" aria-label="Papierkorb"><use href="#i-trash"/></svg> löschen.</li>
+          <li>Aufgaben lassen sich mit einem Tippen auf den Kreis abhaken, ohne die Notiz zu öffnen.</li>
+        </ul>
+
+        <h3 id="editor">Notizen schreiben</h3>
+        <p>Eine neue Notiz beginnt standardmässig mit dem Namen der Schüler:in und dem Datum als Titel. Gespeichert wird laufend, auch ohne Schliessen der Notiz durch «Speichern».</p>
+        <figure class="shot shot--crop" style="--shot: 3 / 2; --at: 92%">
+          <a href="../screenshots/lektion.webp"><img src="../screenshots/lektion.webp" width="1520" height="2020" loading="lazy" decoding="async" alt="Die Notiz von heute beim Schreiben: oben das Datum und «Speichern», darunter die Leiste zum Formatieren und der Text mit Überschriften und Listen"></a>
+        </figure>
+        <ul>
+          <li>Die Leiste über der Notiz bietet die gängigsten Formatierungsoptionen. Zusätzliche Optionen sind im Vollbild-Editor vorhanden, erreichbar mittels <svg class="ico" role="img" aria-label="Vollbild"><use href="#i-full"/></svg>.</li>
+          <li>Mit einem Wischen mit dem Finger nach rechts über bestehende Listenpunkte lassen sich diese einrücken, nach links wieder ausrücken.</li>
+          <li>Unter <svg class="ico" role="img" aria-label="Mehr"><use href="#i-more"/></svg> lässt sich die Notiz als Datei teilen, mit Formatierung kopieren (um sie z.&nbsp;B. als Aufgabe per E-Mail zu teilen) oder löschen.</li>
+          <li>«Expertenmodus» unter <svg class="ico" role="img" aria-label="Mehr"><use href="#i-more"/></svg> zeigt die Notiz als Markdown, so wie sie in der Datei steht. «Vorschau» zeigt sie dort formatiert.</li>
+          <li>Eine Notiz, die ausserhalb von padago in einer nicht unterstützten Schreibweise verfasst wurde, öffnet im Expertenmodus. Die betroffenen Stellen sind rot markiert; «Normal anzeigen» schreibt sie in eine unterstützte Schreibweise um, der Inhalt bleibt dabei erhalten.</li>
+          <li>Ein Tippen auf das Datum über der Notiz ändert ihren Tag. Ein Tag, der schon eine Notiz hat, lässt sich nicht wählen.</li>
+          <li>«Speichern» schliesst die Notiz.</li>
+        </ul>
+
         <h3 id="verlauf">Alle Notizen</h3>
-        <p class="todo">Folgt.</p>
+        <p>«Alle Notizen ›» zeigt sämtliche Notizen einer Schüler:in, die neueste zuoberst, nach Schuljahren geordnet.</p>
+        <figure class="shot shot--crop" style="--shot: 16 / 9">
+          <a href="../screenshots/verlauf.webp"><img src="../screenshots/verlauf.webp" width="1520" height="2020" loading="lazy" decoding="async" alt="Alle Notizen einer Schülerin im Schuljahr 20-21, jede Zeile mit Datum, Anfang der Notiz, Papierkorb und Stift; eine Notiz ist zum Lesen geöffnet"></a>
+        </figure>
+        <ul>
+          <li>Mit <svg class="ico" role="img" aria-label="Stift"><use href="#i-pencil"/></svg> lässt sich eine Notiz direkt in der Liste bearbeiten, mit <svg class="ico" role="img" aria-label="Papierkorb"><use href="#i-trash"/></svg> löschen.</li>
+          <li>Der Schuljahresbeginn lässt sich unter <a href="#einstellungen-notizen">Einstellungen › Notizen</a> anpassen.</li>
+        </ul>
+
         <h3 id="persoenlich">Persönliche Notizen</h3>
-        <p class="todo">Folgt.</p>
+        <p>Die Persönlichen Notizen bieten Platz für Notizen, die sich keiner Schüler:in zuordnen lassen. Sie sind erreichbar über <svg class="ico" role="img" aria-label="Mehr"><use href="#i-more"/></svg> › «Persönliche Notizen» oder über eine unter <a href="#gesten">Einstellungen › Gesten</a> definierte Geste.</p>
+        <figure class="shot shot--crop" style="--shot: 16 / 9">
+          <a href="../screenshots/persoenlich.webp"><img src="../screenshots/persoenlich.webp" width="2020" height="1520" loading="lazy" decoding="async" alt="Die persönlichen Notizen: links das Suchfeld und die Titel «Vorspiel im Juni» und «Vorbereitung Mai», rechts die Notiz «Vorbereitung Mai» mit einer Aufgabenliste"></a>
+        </figure>
+        <ul>
+          <li><svg class="ico" role="img" aria-label="Plus"><use href="#i-plus"/></svg> legt eine neue Notiz an. Ihre erste Zeile wird als Titel in der Liste angezeigt.</li>
+          <li>Das Suchfeld durchsucht Titel und Text. Mittels <svg class="ico" role="img" aria-label="Sortieren"><use href="#i-sort"/></svg> lassen sich die Notizen nach «Neueste zuerst», «Zuletzt geändert» oder alphabetisch sortieren.</li>
+          <li>Mit <svg class="ico" role="img" aria-label="Mehr"><use href="#i-more"/></svg> neben einem Titel lässt sich die Notiz teilen, duplizieren oder löschen.</li>
+          <li>Die Dateien liegen im Ordner «Persönlich» (siehe <a href="#ordner">Der Ordner Padago</a>).</li>
+        </ul>
       </section>
 
       <section aria-labelledby="notenbibliothek">
@@ -129,11 +321,6 @@
         <p class="todo">Folgt.</p>
       </section>
 
-      <section aria-labelledby="live">
-        <h2 id="live">Live</h2>
-        <p class="todo">Folgt.</p>
-      </section>
-
       <section aria-labelledby="einstellungen">
         <h2 id="einstellungen">Einstellungen</h2>
         <h3 id="allgemein">Allgemein</h3>
@@ -148,19 +335,24 @@
         <p class="todo">Folgt.</p>
       </section>
 
-      <section aria-labelledby="offline">
-        <h2 id="offline">Offline und Synchronisation</h2>
-        <p class="todo">Folgt.</p>
-      </section>
-
       <section aria-labelledby="dateien">
         <h2 id="dateien">Die Dateien ausserhalb von padago</h2>
         <p class="todo">Folgt.</p>
       </section>
 
-      <section aria-labelledby="hilfe">
-        <h2 id="hilfe">Hilfe</h2>
-        <p>Fragen, Fehler und Wünsche an <a href="mailto:info@padago.org">info@padago.org</a>.</p>
+      <section aria-labelledby="synchronisation">
+        <h2 id="synchronisation">Synchronisation</h2>
+        <h3 id="speicherort">Speicherort: iPad oder Nextcloud</h3>
+        <p class="todo">Folgt.</p>
+        <h3 id="nextcloud">Nextcloud verbinden</h3>
+        <p class="todo">Folgt.</p>
+        <h3 id="ohne-verbindung">Ohne Verbindung</h3>
+        <p class="todo">Folgt.</p>
+      </section>
+
+      <section aria-labelledby="live">
+        <h2 id="live">Live</h2>
+        <p class="todo">Folgt.</p>
       </section>
     </div>
   </article>
@@ -174,6 +366,34 @@
   </nav>
   <p>© 2026 padago</p>
 </footer>
+
+<!-- A screenshot opened whole, over the page, as on the start page. Without
+     the script, its link opens the picture on its own instead. -->
+<dialog class="view" aria-label="Bildschirmfoto">
+  <form method="dialog">
+    <button class="view__close" aria-label="Schliessen">
+      <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </form>
+  <img alt="">
+</dialog>
+
+<script>
+  const view = document.querySelector(".view");
+  const whole = view.querySelector("img");
+  for (const link of document.querySelectorAll(".shot a")) {
+    link.addEventListener("click", event => {
+      // A click for a new tab or window still gets one.
+      if (event.button || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      whole.src = link.href;
+      whole.alt = link.querySelector("img").alt;
+      view.showModal();
+    });
+  }
+  // The button, Escape, or a click anywhere closes it.
+  view.addEventListener("click", () => view.close());
+</script>
 
 </body>
 </html>

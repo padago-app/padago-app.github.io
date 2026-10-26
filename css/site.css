@@ -48,6 +48,9 @@ body {
 }
 
 img { display: block; max-width: 100%; height: auto; }
+/* hidden is HTML's; on an svg, such as a sprite of icons, browsers ignore it
+   and leave a 300 × 150 box. */
+svg[hidden] { display: none; }
 
 a {
   color: var(--ink);
@@ -358,10 +361,43 @@ html:has(.view[open]) { overflow: hidden; }
 .prose h2 { font-size: 1.25rem; margin-top: 3rem; scroll-margin-top: 1.5rem; }
 .prose h3 { font-size: 1em; margin-top: 2rem; scroll-margin-top: 1.5rem; }
 .prose h2 + h3 { margin-top: 1.25rem; }
-.prose p, .prose ul { margin: .75em 0 0; }
-.prose ul { padding-left: 1.2em; }
+.prose p, .prose ul, .prose ol { margin: .75em 0 0; }
+.prose ul, .prose ol { padding-left: 1.2em; }
 .prose li + li { margin-top: .35em; }
 .prose .lead { color: var(--ink); }
+/* Text as it is typed into the app, in the page's own letters. */
+.prose pre {
+  margin: .75em 0 0;
+  padding: .75rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: .75rem;
+  color: var(--ink);
+  font: inherit;
+  white-space: pre-wrap;
+}
+
+/* The same week written two ways, a list and a table, one over the other:
+   side by side, the text column is too narrow for the table's names. Each
+   in the box text typed into the app stands in. */
+.samples {
+  display: grid;
+  gap: .75rem;
+  margin-top: .75em;
+  font-size: .9375rem;
+}
+.samples > pre { margin: 0; white-space: pre; overflow-x: auto; }
+.samples > table {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: .75rem;
+  border-spacing: 0;
+  padding: .5rem .75rem;
+  color: var(--ink);
+}
+.samples th, .samples td { padding: .25rem; text-align: left; vertical-align: top; }
+.samples th { font-weight: 400; color: var(--text); }
+.samples thead th { border-bottom: 1px solid var(--line); }
+.samples tbody th { width: 1%; padding-right: 1rem; white-space: nowrap; }
 
 .stand { color: var(--faint); font-size: .875rem; margin-top: .5rem; }
 
@@ -382,6 +418,35 @@ html:has(.view[open]) { overflow: hidden; }
 .doc { counter-reset: ch; }
 .doc > section > h2 { counter-increment: ch; }
 .doc > section > h2::before { content: counter(ch); display: inline-block; min-width: 1.75em; color: var(--faint); font-weight: 400; }
+
+/* A button of the app named by its icon, in the line of text: the app's own
+   glyph and stroke, a little larger than the letters, in white so it reads
+   as the thing to tap. */
+.ico {
+  display: inline-block;
+  width: 1.25em;
+  height: 1.25em;
+  vertical-align: -.3em;
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  color: var(--ink);
+}
+
+/* A screenshot in the Anleitung, the width of the text. A tall screen is
+   cropped to the part the text is about (--shot, --at); a click on it shows
+   the whole screen, as on the start page. */
+.shot { margin: 1.25rem 0 0; }
+.shot + p { margin-top: 1.25rem; }
+.shot a { display: block; cursor: zoom-in; border-radius: .75rem; }
+.shot img { display: block; width: 100%; height: auto; border-radius: .75rem; }
+.shot--crop img {
+  aspect-ratio: var(--shot, 4 / 3);
+  object-fit: cover;
+  object-position: 50% var(--at, 0%);
+}
 
 @media (min-width: 60rem) {
   .docs { grid-template-columns: 13rem minmax(0, 1fr); }
