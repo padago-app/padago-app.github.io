@@ -62,7 +62,7 @@ a {
 a:hover { text-decoration-color: var(--ink); }
 :focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; border-radius: 2px; }
 
-h1, h2, h3 { color: var(--ink); font-weight: 600; line-height: 1.25; margin: 0; }
+h1, h2, h3, h4 { color: var(--ink); font-weight: 600; line-height: 1.25; margin: 0; }
 strong { color: var(--ink); font-weight: 600; }
 
 .wrap {
@@ -404,20 +404,78 @@ html:has(.view[open]) { overflow: hidden; }
 /* What is not written yet says so, quietly. */
 .todo { color: var(--faint); }
 
-/* The Anleitung: chapters down the side once there is room for them. */
-.docs { display: grid; gap: 0 4rem; }
-.docs .prose { padding-top: 0; }
-.toc { padding-block: clamp(2.5rem, 7vw, 4.5rem) 2.5rem; font-size: .9375rem; }
-.toc h2 { font-size: .875rem; color: var(--faint); font-weight: 400; margin-bottom: .75rem; }
-.toc ol { list-style: none; margin: 0; padding: 0; counter-reset: ch; }
-.toc li { counter-increment: ch; padding-block: .2rem; display: flex; }
-.toc li::before { content: counter(ch); flex: none; width: 1.75em; color: var(--faint); font-variant-numeric: tabular-nums; }
+/* The Anleitung, one chapter at a time under its section's name, as the
+   app is in parts. The menu names the sections, in a line over the text
+   where it is narrow, and the chapters of the one shown in a line under
+   them. Beside the text it opens that section to its chapters, and the
+   chapter shown to its topics. */
+.docs { display: grid; }
+.docs .prose { padding-top: 2rem; }
+.toc {
+  padding-block: clamp(2.5rem, 7vw, 4.5rem) 1.25rem;
+  border-bottom: 1px solid var(--line);
+  font-size: .9375rem;
+  line-height: 1.35;
+}
+.toc h1 { font-size: .875rem; color: var(--faint); font-weight: 400; margin-bottom: .75rem; }
+.toc ol { list-style: none; margin: 0; padding: 0; }
+.toc > ol { display: flex; flex-wrap: wrap; gap: .4rem 1.25rem; }
+.toc ol ol { display: none; }
 .toc a { color: var(--text); text-decoration: none; }
-.toc a:hover { color: var(--ink); }
+.toc a:hover, .toc a[aria-current] { color: var(--ink); }
+.toc > ol > li > a[aria-current] { font-weight: 600; }
 
-.doc { counter-reset: ch; }
-.doc > section > h2 { counter-increment: ch; }
-.doc > section > h2::before { content: counter(ch); display: inline-block; min-width: 1.75em; color: var(--faint); font-weight: 400; }
+@media (max-width: 45.99rem) {
+  .toc > ol > li:has(> a[aria-current]) { display: contents; }
+  .toc > ol > li:has(> a[aria-current]) > ol {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    order: 1;
+    gap: .3rem 1rem;
+    margin-top: .6rem;
+    font-size: .875rem;
+  }
+}
+
+/* A section's name heads the page; the chapter shown and its topics are
+   the steps below it. */
+.doc h2 { font-size: clamp(1.75rem, 1.4rem + 1.4vw, 2.25rem); letter-spacing: -.01em; margin-top: 0; }
+.doc h3 { font-size: 1.25rem; margin-top: 0; }
+.doc h4 { font-size: 1em; margin-top: 2rem; }
+.doc h3 + h4 { margin-top: 1.25rem; }
+.doc section > section { margin-top: 1.5rem; }
+.doc :is(h2, h3, h4) { scroll-margin-top: 1.5rem; }
+/* Where a link into another chapter leaves the focus, not a thing to tap. */
+.doc :is(h2, h3, h4):focus { outline: none; }
+/* Without the script, the sections one under the other, and the chapters
+   in each. */
+.doc > section:not([hidden]) ~ section:not([hidden]) { margin-top: 4.5rem; }
+.doc section > section:not([hidden]) ~ section:not([hidden]) { margin-top: 3rem; }
+
+/* At the foot of a chapter, the ones before and after it. */
+.pager {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .75rem;
+  margin-top: clamp(3rem, 8vw, 4.5rem);
+}
+.pager[hidden] { display: none; }
+.pager a {
+  padding: .75rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: .75rem;
+  color: var(--ink);
+  font-weight: 600;
+  line-height: 1.35;
+  text-decoration: none;
+}
+.pager a:hover { border-color: var(--faint); }
+.pager span { display: block; color: var(--faint); font-size: .875rem; font-weight: 400; }
+.pager [rel="next"] { grid-column: 2; text-align: right; }
+/* The arrow keeps to the name's word, where a long name wraps. */
+.pager [rel="prev"] strong::before { content: "‹\a0"; content: "‹\a0" / ""; }
+.pager [rel="next"] strong::after { content: "\a0›"; content: "\a0›" / ""; }
 
 /* A button of the app named by its icon, in the line of text: the app's own
    glyph and stroke, a little larger than the letters, in white so it reads
@@ -448,10 +506,30 @@ html:has(.view[open]) { overflow: hidden; }
   object-position: 50% var(--at, 0%);
 }
 
-@media (min-width: 60rem) {
-  .docs { grid-template-columns: 13rem minmax(0, 1fr); }
+/* The menu beside the text from an iPad mini upright, 744 px, on. */
+@media (min-width: 46rem) {
+  .docs { grid-template-columns: clamp(11rem, 18vw, 14rem) minmax(0, 1fr); column-gap: clamp(2.5rem, 5vw, 4rem); }
   .docs .prose { padding-top: clamp(2.5rem, 7vw, 4.5rem); }
-  .toc { position: sticky; top: 0; align-self: start; max-height: 100vh; overflow-y: auto; }
+  .toc {
+    position: sticky;
+    top: 0;
+    align-self: start;
+    max-height: 100vh;
+    overflow-y: auto;
+    padding-bottom: 2.5rem;
+    border-bottom: 0;
+  }
+  .toc > ol { display: block; }
+  .toc a { display: block; padding-block: .25rem; }
+  .toc li:has(a[aria-current]) > ol { display: block; }
+  /* The chapters on a hairline, marked on it the topic being read, or the
+     chapter shown before its first topic. */
+  .toc ol ol { margin-block: .25rem .5rem; border-left: 1px solid var(--line); }
+  .toc ol ol ol { margin: 0; border: 0; }
+  .toc ol ol a { margin-left: -1px; padding-left: .85rem; border-left: 1px solid transparent; }
+  .toc ol ol ol a { padding-left: 1.7rem; font-size: .875rem; }
+  .toc ol ol a[aria-current="location"],
+  .toc li:not(:has(a[aria-current="location"])) > a[aria-current="page"] { border-left-color: var(--ink); }
 }
 
 /* ---------------------------------------------------------------- foot */
