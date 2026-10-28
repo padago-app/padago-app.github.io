@@ -500,6 +500,14 @@ html:has(.view[open]) { overflow: hidden; }
    white as its icons are, so it too reads as the thing to tap. */
 .ui { color: var(--ink); }
 
+/* A list whose items are each led by a picture the app itself shows, as the
+   four layouts under Darstellung are: the picture beside its words, where a
+   bullet's text would start. */
+.pictured { list-style: none; }
+.pictured li { display: grid; grid-template-columns: 4.5rem minmax(0, 1fr); gap: 1rem; align-items: center; }
+.pictured li + li { margin-top: .75rem; }
+.pictured img { width: 100%; height: auto; border-radius: .6rem; }
+
 /* The app's main switch in the line of text, cut from a screenshot and
    rounded as the switch is, so the bar around it falls away. */
 .pivot {

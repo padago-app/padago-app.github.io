@@ -24,6 +24,9 @@
     <path d="M9.193 17.111A2.6 2 -20 0 1 7.434 19.879A2.6 2 -20 0 1 4.307 18.889A2.6 2 -20 0 1 6.066 16.121A2.6 2 -20 0 1 9.193 17.111ZM18.193 15.311A2.6 2 -20 0 1 16.434 18.079A2.6 2 -20 0 1 13.307 17.089A2.6 2 -20 0 1 15.066 14.321A2.6 2 -20 0 1 18.193 15.311ZM7.537 17.65V6.4a.875 .875 0 0 1 1.75 0v11.25a.875 .875 0 0 1-1.75 0ZM16.537 15.85V4.6a.875 .875 0 0 1 1.75 0v11.25a.875 .875 0 0 1-1.75 0ZM8.24 5.542 17.24 3.742a.875 .875 0 0 1 .344 1.716l-9 1.8a.875 .875 0 0 1-.344-1.716Z" fill="currentColor" stroke="none"/>
   </symbol>
   <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 4v16M4 12h16"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M4 12h16"/></symbol>
+  <symbol id="i-lines" viewBox="0 0 24 24"><path d="M4 6.6h16M4 12h16M4 17.4h16"/></symbol>
+  <symbol id="i-grip" viewBox="0 0 24 24"><path d="M8 10.2 12 6.2l4 4M8 13.8l4 4 4-4"/></symbol>
   <symbol id="i-close" viewBox="0 0 24 24"><path d="M6.3 6.3 17.7 17.7M17.7 6.3 6.3 17.7"/></symbol>
   <symbol id="i-more" viewBox="0 0 24 24">
     <circle cx="5.3" cy="12" r="1.55" fill="currentColor" stroke="none"/>
@@ -63,10 +66,21 @@
     <path d="M4.4 5v14"/>
     <path d="M20 12H9.2M13.8 7.6 9.2 12l4.6 4.4"/>
   </symbol>
+  <symbol id="i-turn-left" viewBox="0 0 24 24">
+    <path d="M3.4 12a8.6 8.6 0 1 0 2.52-6.08"/>
+    <path d="M3.4 4v5.6h5.6"/>
+  </symbol>
+  <symbol id="i-turn-right" viewBox="0 0 24 24">
+    <path d="M20.6 12a8.6 8.6 0 1 1-2.52-6.08"/>
+    <path d="M20.6 4v5.6h-5.6"/>
+  </symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24">
+    <rect x="4.2" y="7.6" width="12.2" height="12.2" rx="2.2"/>
+    <path d="M9.4 3.6h8.4a2 2 0 0 1 2 2v8.4"/>
+  </symbol>
   <symbol id="i-full" viewBox="0 0 24 24">
     <path d="M9 3.8H5.8a2 2 0 0 0-2 2V9M15 3.8h3.2a2 2 0 0 1 2 2V9M9 20.2H5.8a2 2 0 0 1-2-2V15M15 20.2h3.2a2 2 0 0 0 2-2V15"/>
   </symbol>
-  <symbol id="i-back" viewBox="0 0 24 24"><path d="M15.5 5 8.5 12l7 7"/></symbol>
   <symbol id="i-sheet" viewBox="0 0 24 24">
     <rect x="4" y="4" width="16" height="16" rx="2.2"/>
     <path d="M10.629 15.249A2 1.5 -20 0 1 9.263 17.343A2 1.5 -20 0 1 6.871 16.618A2 1.5 -20 0 1 8.237 14.524A2 1.5 -20 0 1 10.629 15.249ZM16.629 14.049A2 1.5 -20 0 1 15.263 16.143A2 1.5 -20 0 1 12.871 15.418A2 1.5 -20 0 1 14.237 13.324A2 1.5 -20 0 1 16.629 14.049ZM8.948 15.645V8.575a.875 .875 0 0 1 1.75 0v7.07a.875 .875 0 0 1-1.75 0ZM14.948 14.445V7.375a.875 .875 0 0 1 1.75 0v7.07a.875 .875 0 0 1-1.75 0ZM9.652 7.717 15.652 6.517a.875 .875 0 0 1 .343 1.716l-6 1.2a.875 .875 0 0 1-.343-1.716Z" fill="currentColor" stroke="none"/>
@@ -74,6 +88,10 @@
   <symbol id="i-folder-plus" viewBox="0 0 24 24">
     <path d="M3.6 18V6a2 2 0 0 1 2-2h3.7l2 2.4h7.1a2 2 0 0 1 2 2v9.6a2 2 0 0 1-2 2H5.6a2 2 0 0 1-2-2z"/>
     <path d="M12 10.6v5.2M9.4 13.2h5.2"/>
+  </symbol>
+  <symbol id="i-paper-ruled" viewBox="0 0 24 24">
+    <rect x="5.4" y="3.4" width="13.2" height="17.2" rx="2.2"/>
+    <path d="M8.4 8.4h7.2M8.4 12h7.2M8.4 15.6h7.2"/>
   </symbol>
   <symbol id="i-select" viewBox="0 0 24 24">
     <path d="M11.8 7h8.2M11.8 17h8.2"/>
@@ -161,6 +179,7 @@
       <li><a href="#einfuehrung">Einführung</a></li>
       <li><a href="#notizen">Notizen</a></li>
       <li><a href="#noten">Noten</a></li>
+      <li><a href="#zuordnen">Stücke zuordnen</a></li>
       <li><a href="#einstellungen">Einstellungen</a></li>
       <li><a href="#daten">Daten</a></li>
       <li><a href="#synchronisation">Synchronisation</a></li>
@@ -390,221 +409,140 @@ Dienstag
           <h3 id="notenbibliothek">Notenbibliothek</h3>
           <p>Die Startseite des Noten-Bereichs ist die Notenbibliothek: eine Übersicht über alle PDF-Dateien im Ordner «Noten» (siehe <a href="#ordner">Der Ordner Padago</a>).</p>
           <figure class="shot shot--crop" style="--shot: 15 / 14">
-            <a href="../screenshots/notenbibliothek.webp"><img src="../screenshots/notenbibliothek.webp" width="1520" height="2020" loading="lazy" decoding="async" alt="Die Notenbibliothek: oben links der Weg zurück zum zuletzt geöffneten Stück, darunter das Suchfeld, die Ordner von «Barock» bis «Romantik» und die Stücke von Bach und Hanon, jedes mit einem Bild seiner ersten Seite und seiner Dateigrösse"></a>
+            <a href="../screenshots/notenbibliothek.webp"><img src="../screenshots/notenbibliothek.webp" width="1520" height="2020" loading="lazy" decoding="async" alt="Die Notenbibliothek mit dem geöffneten Menü eines Stücks: «Teilen», «Bewegen», «Umbenennen», «Duplizieren», «Informationen», «Zu Schüler:in hinzufügen» und «Löschen»; oben links der Weg zurück zum zuletzt geöffneten Stück"></a>
           </figure>
           <ul>
             <li>Ein Tippen auf ein Stück öffnet es in der <a href="#notenansicht">Notenansicht</a>.</li>
             <li><svg class="ico" role="img" aria-label="Notenansicht"><use href="#i-sheet"/></svg> in der Werkzeugleiste öffnet das zuletzt geöffnete Stück in der <a href="#notenansicht">Notenansicht</a>.</li>
-            <li>Mit <svg class="ico" role="img" aria-label="Plus"><use href="#i-plus"/></svg> › <svg class="ico" role="img" aria-label="Importieren"><use href="#i-import"/></svg> <span class="ui">«Importieren»</span> in der Werkzeugleiste lassen sich PDF-Dateien in den geöffneten Ordner importieren. Gibt es den Namen dort schon, erhält die neue Datei ein «(2)» hinter dem Namen. Noten lassen sich auch direkt über den <a href="#ordner">Ordner Padago</a> hinzufügen.</li>
-          </ul>
-
-          <h4 id="ordner-suche">Ordner, Suche und Sortierung</h4>
-          <p>Die Bibliothek lässt sich frei in Ordner gliedern, etwa nach Komponist:in, Stufe oder Besetzung. <svg class="ico" role="img" aria-label="Ordner mit Plus"><use href="#i-folder-plus"/></svg> in der Werkzeugleiste legt im gerade geöffneten Ordner einen neuen an.</p>
-          <ul>
-            <li>Mit <svg class="ico" role="img" aria-label="Mehr"><use href="#i-more"/></svg> am Ende einer Zeile lässt sich ein Stück teilen, bewegen, umbenennen, duplizieren, einer Schüler:in zuordnen (<span class="ui">«Zu Schüler:in hinzufügen»</span>) oder löschen. <span class="ui">«Informationen»</span> zeigt die Angaben zur Datei.</li>
-            <li>Mit langem Drücken lässt sich ein Stück oder Ordner aufnehmen und auf einen Ordner ziehen. Kurz über einem Ordner gehalten, öffnet sich dieser; über dem Ordnerpfad oder <svg class="ico" role="img" aria-label="Pfeil zurück"><use href="#i-back"/></svg> geht es eine Ebene höher.</li>
-            <li>Mit <svg class="ico" role="img" aria-label="Liste zum Auswählen"><use href="#i-select"/></svg> am Ende des Ordnerpfads lassen sich mehrere Stücke und Ordner auswählen, auch aus verschiedenen Ordnern und Suchen. <svg class="ico" role="img" aria-label="Mehr"><use href="#i-more"/></svg> daneben bietet dann <span class="ui">«Teilen»</span> (als ZIP), <span class="ui">«Bewegen»</span>, <span class="ui">«Duplizieren»</span>, <span class="ui">«Zu Schüler:in hinzufügen»</span> und <span class="ui">«Löschen»</span> für alle auf einmal.</li>
+            <li>Die Bibliothek lässt sich frei in Ordner gliedern. Mit <svg class="ico" role="img" aria-label="Ordner mit Plus"><use href="#i-folder-plus"/></svg> kann ein neuer Ordner angelegt werden.</li>
+            <li>Mit <svg class="ico" role="img" aria-label="Mehr"><use href="#i-more"/></svg> am Ende einer Zeile lässt sich ein Stück teilen, bewegen, umbenennen, duplizieren, einer Schüler:in zuordnen oder löschen.</li>
+            <li>Stücke und Ordner lassen sich mittels langem Drücken verschieben. Während eine Datei oder ein Ordner so gehalten wird, können weitere mittels Tippen zur Auswahl hinzugefügt werden.</li>
+            <li>Mit <svg class="ico" role="img" aria-label="Mehrere auswählen"><use href="#i-select"/></svg> lassen sich mehrere Stücke und Ordner auswählen. Daneben erscheint ein globales <svg class="ico" role="img" aria-label="Mehr"><use href="#i-more"/></svg>-Menü mit Optionen für die Auswahl.</li>
             <li>Ein bewegtes oder umbenanntes Stück bleibt seinen Schüler:innen zugeordnet, samt Anmerkungen, auch wenn es in der Dateien-App bewegt wurde.</li>
-            <li>Das Suchfeld durchsucht die ganze Bibliothek, auch die Ordnernamen: «bach invention» findet die Invention auch im Ordner «Bach». Der Name einer Schüler:in zeigt zuoberst die Stücke, an denen sie gerade arbeitet.</li>
+            <li>Das Suchfeld durchsucht die ganze Bibliothek, auch die Ordnernamen. Eine Suche nach Namen von Schüler:innen zeigt Stücke, die ihnen zugeordnet sind.</li>
             <li>Mittels <svg class="ico" role="img" aria-label="Sortieren"><use href="#i-sort"/></svg> im Suchfeld lässt sich die Reihenfolge wählen: <span class="ui">«Alphabetisch»</span>, <span class="ui">«Zuletzt verwendet»</span>, <span class="ui">«Zuletzt hinzugefügt»</span> oder <span class="ui">«Dateigrösse»</span>. Ein zweites Tippen auf dieselbe kehrt sie um.</li>
-            <li><span class="ui">«Zuletzt verwendet»</span> findet das Stück der letzten Woche, dessen Name gerade nicht einfällt. <span class="ui">«Dateigrösse»</span> zeigt die grössten Dateien zuerst, etwa um sie zu <a href="#optimieren">optimieren</a>.</li>
           </ul>
 
-          <h4 id="zuordnen">Stücke zuordnen</h4>
-          <p>Ein Stück, an dem eine Schüler:in arbeitet, wird ihr zugeordnet, zusammen mit der Seite, auf der es für sie beginnt. Unter «Aktuelle Stücke» auf ihrer Seite öffnet es dann direkt dort, statt auf Seite 1 eines dicken Hefts.</p>
-          <figure class="shot shot--crop" style="--shot: 1 / 1">
-            <a href="../screenshots/zuordnen.webp"><img src="../screenshots/zuordnen.webp" width="1520" height="2020" loading="lazy" decoding="async" alt="Die zweite Seite der «Sérénade sous Bois» in der Notenansicht, darüber das Fenster «Zu Aktuelle Stücke hinzufügen»: «Chrétien — Sérénade sous Bois» ab Seite 2 zuordnen, darunter die Schüler:innen mit Tag und Uhrzeit ihrer Lektion"></a>
-          </figure>
+          <h4 id="noten-hinzufuegen">Stücke zur Notenbibliothek hinzufügen</h4>
           <ul>
-            <li>In der Notenansicht: zur gewünschten Seite blättern, <svg class="ico" role="img" aria-label="Person mit Plus"><use href="#i-person-plus"/></svg> in der Werkzeugleiste antippen und die Schüler:in wählen. Die angezeigte Seite wird zur Startseite. Danach lässt sich ein eigener Name vergeben, etwa «Sonatine» für ein Stück aus einer Klavierschule.</li>
-            <li>Auf der Seite der Schüler:in: <svg class="ico" role="img" aria-label="Plus"><use href="#i-plus"/></svg> neben «Aktuelle Stücke» öffnet die Bibliothek. Ein Tippen auf ein Stück zeigt seine Seiten, um die Startseite zu wählen; <span class="ui">«Hinzufügen»</span> fragt dann nach dem Namen.</li>
-            <li>In der Notenbibliothek: <svg class="ico" role="img" aria-label="Mehr"><use href="#i-more"/></svg> › <span class="ui">«Zu Schüler:in hinzufügen»</span>, auch für mehrere ausgewählte Stücke auf einmal. Sie beginnen dann auf Seite 1 und tragen den Namen der Datei.</li>
-            <li>Dasselbe Heft lässt sich einer Schüler:in auch mehrmals zuordnen, jedes Mal mit eigener Startseite und eigenem Namen.</li>
-          </ul>
-          <p>Unter «Aktuelle Stücke» stehen die Stücke in der Reihenfolge, in der sie in der Lektion drankommen.</p>
-          <ul>
-            <li>Ein Tippen öffnet das Stück auf seiner Startseite.</li>
-            <li>Mit langem Drücken lässt sich ein Stück an einen anderen Platz ziehen. Auf «Archiv» gezogen, wird es archiviert.</li>
-            <li>Mit <svg class="ico" role="img" aria-label="Mehr"><use href="#i-more"/></svg> lässt sich ein Stück teilen, umbenennen, archivieren oder entfernen. Die Datei bleibt in jedem Fall in der Bibliothek.</li>
-            <li>Archivierte Stücke behalten ihre Startseite. Unter «Archiv» lassen sie sich mit <span class="ui">«Wieder aufnehmen»</span> zurückholen.</li>
-            <li>Mit <svg class="ico" role="img" aria-label="Liste zum Auswählen"><use href="#i-select"/></svg> lassen sich mehrere Stücke auf einmal teilen, archivieren oder entfernen.</li>
-          </ul>
-          <p>Ist ein zugeordnetes Stück geöffnet, steht unter der Werkzeugleiste der Name der Schüler:in.</p>
-          <ul>
-            <li><svg class="ico" role="img" aria-label="Lesezeichen"><use href="#i-bookmark"/></svg> macht die angezeigte Seite zur Startseite; gefüllt heisst, sie ist es bereits. <svg class="ico" role="img" aria-label="Kreispfeil"><use href="#i-return"/></svg> führt zurück zur Startseite.</li>
-            <li>Links und rechts davon stehen das vorige und das nächste Stück der Schüler:in, ganz aussen die vorige und die nächste Schüler:in im Stundenplan. So lässt sich eine Lektion durchgehen, ohne die Notenansicht zu verlassen.</li>
-            <li>Ein Tippen auf den Namen öffnet die Seite der Schüler:in.</li>
-            <li><svg class="ico" role="img" aria-label="Person mit Kreuz"><use href="#i-person-x"/></svg> nimmt das Stück von ihrer Liste, ins Archiv oder ganz.</li>
-            <li><svg class="ico" role="img" aria-label="Personen"><use href="#i-people"/></svg> in der Werkzeugleiste zeigt, welchen Schüler:innen das Stück zugeordnet ist.</li>
-          </ul>
-
-          <h4 id="vorlagen">Vorlagen</h4>
-          <p>Mit <svg class="ico" role="img" aria-label="Plus"><use href="#i-plus"/></svg> › <span class="ui">«Vorlagen»</span> in der Notenbibliothek entsteht leeres Papier als eigenes PDF, etwa Notenpapier, um mit einer Schüler:in eine Übung aufzuschreiben.</p>
-          <figure class="shot shot--crop" style="--at: 50%">
-            <a href="../screenshots/vorlagen.webp"><img src="../screenshots/vorlagen.webp" width="1520" height="2020" loading="lazy" decoding="async" alt="Die Vorlagen über der Notenbibliothek: «Leere Seite», «Textlinien» und die gewählten «Notenlinien», darunter ein Blatt im Hochformat, oben «Speichern»"></a>
-          </figure>
-          <ul>
-            <li>Zur Wahl stehen <span class="ui">«Leere Seite»</span>, <span class="ui">«Textlinien»</span> und <span class="ui">«Notenlinien»</span>, die Anzahl Blätter und Hoch- oder Querformat.</li>
-            <li><span class="ui">«Speichern»</span> fragt nach einem Namen und legt die Datei im gerade geöffneten Ordner ab.</li>
-            <li>Wie jedes Stück lässt sich eine Vorlage einer Schüler:in zuordnen und mit <a href="#anmerkungen">Anmerkungen</a> beschreiben.</li>
-            <li>Leere Seiten lassen sich auch in ein bestehendes Stück einfügen (siehe <a href="#neu-anordnen">Neu anordnen</a>).</li>
+            <li>Mit <svg class="ico" role="img" aria-label="Plus"><use href="#i-plus"/></svg> › <svg class="ico" role="img" aria-label="Importieren"><use href="#i-import"/></svg> <span class="ui">«Importieren»</span> in der Werkzeugleiste lassen sich PDF-Dateien in den geöffneten Ordner importieren. Noten lassen sich auch direkt über den <a href="#ordner">Ordner Padago</a> hinzufügen.</li>
+            <li>Mit <svg class="ico" role="img" aria-label="Plus"><use href="#i-plus"/></svg> › <svg class="ico" role="img" aria-label="Vorlagen"><use href="#i-paper-ruled"/></svg> <span class="ui">«Vorlagen»</span> lassen sich neue PDFs aus leeren Seiten, Textlinien oder Notenpapier erstellen.</li>
+            <li>Auch aus anderen Apps lassen sich PDF-Dateien über das Teilen-Menü von iPadOS an padago senden.</li>
           </ul>
         </section>
 
         <section aria-labelledby="notenansicht">
           <h3 id="notenansicht">Notenansicht</h3>
-          <p>Ein Stück öffnet bildschirmfüllend, ohne Leisten. Ein Tippen in die Mitte der Seite blendet die Werkzeugleiste oben und die Seitenleiste unten ein oder aus. Sie liegen über den Noten; die Seite bleibt, wo sie ist.</p>
+          <p>Die Noten werden bildschirmfüllend angezeigt. Das Menü lässt sich jederzeit über ein Tippen in die Mitte der Seite öffnen. Ein Tippen auf das rechte Drittel der Seite blättert vorwärts, auf das linke zurück. Unter <a href="#einstellungen-noten">Einstellungen › Noten</a> lässt sich das Verhalten beim Umblättern konfigurieren.</p>
+          <figure class="shot">
+            <a href="../screenshots/notenansicht.webp"><img src="../screenshots/notenansicht.webp" width="1520" height="2020" loading="lazy" decoding="async" alt="Die Notenansicht mit eingeblendeter Werkzeugleiste: eine Seite der «Sérénade sous Bois», in drei Streifen geteilt, links «Zurückblättern», in der Mitte «Menü», rechts «Weiterblättern»; unten Stimmgerät, Navigationsleiste und Metronom"></a>
+          </figure>
           <ul>
             <li><svg class="ico" role="img" aria-label="Notenregal"><use href="#i-shelf"/></svg> führt zur Notenbibliothek, in den Ordner, in dem sie verlassen wurde.</li>
-            <li>In der Mitte stehen Titel und Seite. Bei einem zugeordneten Stück ist der Titel der Name, den es bei der Schüler:in trägt; ein Tippen darauf benennt es um.</li>
-            <li><svg class="ico" role="img" aria-label="Teilen"><use href="#i-share"/></svg> teilt das Stück als PDF, bei einem zugeordneten Stück wahlweise mit den Anmerkungen der Schüler:in.</li>
-            <li><svg class="ico" role="img" aria-label="Person mit Plus"><use href="#i-person-plus"/></svg> ordnet das Stück einer Schüler:in zu (siehe <a href="#zuordnen">Stücke zuordnen</a>), <svg class="ico" role="img" aria-label="Stift"><use href="#i-pencil"/></svg> öffnet die <a href="#anmerkungen">Anmerkungen</a>.</li>
-            <li><svg class="ico" role="img" aria-label="Mehr"><use href="#i-more"/></svg> enthält die <a href="#darstellung">Darstellung</a>, unter <span class="ui">«Datei»</span> die Bearbeitung des PDFs (<a href="#neu-anordnen">Neu anordnen</a>, <a href="#zuschneiden">Zuschneiden</a>, <a href="#optimieren">Optimieren</a>) und unter <span class="ui">«Werkzeuge»</span> das <a href="#whiteboard">Whiteboard</a> und die <a href="#klaviatur">Klaviatur</a>.</li>
-            <li>Zwei Finger vergrössern die Noten bis aufs Dreifache, etwa für einen genaueren Blick auf eine dichte Stelle.</li>
+            <li>Mittels <svg class="ico" role="img" aria-label="Person mit Plus"><use href="#i-person-plus"/></svg> lässt sich das Stück einer Schüler:in <a href="#zuordnen">zuordnen</a>.</li>
+            <li><svg class="ico" role="img" aria-label="Personen"><use href="#i-people"/></svg> zeigt an, wem das Stück zugeordnet ist.</li>
+            <li><svg class="ico" role="img" aria-label="Mehr"><use href="#i-more"/></svg> enthält die <a href="#darstellung">Darstellungsoptionen</a> und verschiedene Werkzeuge: <a href="#neu-anordnen">Neu anordnen</a>, <a href="#zuschneiden">Zuschneiden</a>, <a href="#optimieren">Optimieren</a>, <a href="#whiteboard">Whiteboard</a> und <a href="#klaviatur">Klaviatur</a>.</li>
+            <li>In der Mitte der Werkzeugleiste stehen Titel und Seite. Mittels Tippen darauf lässt sich die Datei umbenennen.</li>
+            <li>Mittels <svg class="ico" role="img" aria-label="Teilen"><use href="#i-share"/></svg> in der Werkzeugleiste lässt sich das Stück teilen.</li>
+            <li><svg class="ico" role="img" aria-label="Stimmgabel"><use href="#i-fork"/></svg> unten links öffnet das <a href="#stimmgeraet">Stimmgerät</a>.</li>
+            <li>Mit der Navigationsleiste unten lässt sich durch das ganze Stück springen.</li>
+            <li><svg class="ico" role="img" aria-label="Metronom"><use href="#i-metronome"/></svg> unten rechts öffnet das <a href="#metronom">Metronom</a>.</li>
           </ul>
 
-          <h4 id="umblaettern">Umblättern</h4>
-          <p>Ein Tippen auf das rechte Drittel der Seite blättert vorwärts, auf das linke zurück. Die Seiten davor und danach liegen schon bereit, so blättert auch ein grosser Scan ohne Wartezeit um.</p>
+          <h4 id="zugeordnet">Zugeordnete Stücke</h4>
+          <p>Zugeordnete Stücke zeigen weitere Optionen an:</p>
           <ul>
-            <li>Mit der Seitenleiste unten lässt sich durch das ganze Stück springen. Beim Ziehen zeigt eine Vorschau die Seite, umgeblättert wird beim Loslassen.</li>
-            <li>Unter <a href="#einstellungen-noten">Einstellungen › Noten</a> lässt sich wählen, ob mit Tippen, Wischen oder beidem umgeblättert wird, mit welcher Animation (<span class="ui">«Ohne»</span>, <span class="ui">«Stapeln»</span>, <span class="ui">«Schieben»</span> oder <span class="ui">«Rollen»</span>) und ob bei zwei Seiten nebeneinander um eine oder um zwei Seiten.</li>
-            <li><span class="ui">«Über das Stück hinaus»</span>, ebenfalls dort, blättert nach der letzten Seite weiter zum nächsten Stück der Schüler:in, mit <span class="ui">«Alle»</span> danach auch zur nächsten Schüler:in.</li>
+            <li><svg class="ico" role="img" aria-label="Stift"><use href="#i-pencil"/></svg> in der Werkzeugleiste öffnet den <a href="#anmerkungen">Anmerkungen-Modus</a>.</li>
+            <li>Ein Tippen auf den Titel benennt das Stück nur für diese Schüler:in um; die Datei behält ihren Namen.</li>
           </ul>
+          <figure class="shot">
+            <a href="../screenshots/zugeordnet.webp"><img src="../screenshots/zugeordnet.webp" width="2020" height="206" loading="lazy" decoding="async" alt="Die Reihe unter der Werkzeugleiste: aussen die vorherige und die nächste Schüler:in, daneben das vorige und das nächste Stück, in der Mitte die Schüler:in mit Kreuz, Pfeil zur Startseite, Lesezeichen und Entfernen"></a>
+          </figure>
+          <p>Unter der Werkzeugleiste erscheint eine zusätzliche Reihe Buttons. In der Mitte steht der Name der Schüler:in, der das Stück zugeordnet ist:</p>
+          <ul>
+            <li>Mit <svg class="ico" role="img" aria-label="Kreuz"><use href="#i-close"/></svg> lässt sich zur Original-Datei wechseln.</li>
+            <li>Mit <svg class="ico" role="img" aria-label="Kreispfeil"><use href="#i-return"/></svg> lässt sich zur hinterlegten Startseite zurückspringen.</li>
+            <li>Mit <svg class="ico" role="img" aria-label="Lesezeichen"><use href="#i-bookmark"/></svg> lässt sich eine neue Startseite festlegen.</li>
+            <li>Mit <svg class="ico" role="img" aria-label="Person mit Kreuz"><use href="#i-person-x"/></svg> kann das Stück aus den zugeordneten Stücken dieser Schüler:in entfernt oder archiviert werden.</li>
+          </ul>
+          <p>Links und rechts daran anschliessend befinden sich die Buttons, um innerhalb der zugeordneten Stücke dieser Schüler:in zu navigieren. Aussenliegend befinden sich die Buttons, um innerhalb des Stundenplans zur nächsten oder vorherigen Schüler:in zu navigieren.</p>
 
           <h4 id="darstellung">Darstellung</h4>
-          <p>Wie die Seiten auf dem Bildschirm liegen, wird unter <svg class="ico" role="img" aria-label="Mehr"><use href="#i-more"/></svg> › <span class="ui">«Darstellung»</span> gewählt. Die vier Bilder zeigen die Möglichkeiten: oben für das quer gehaltene iPad, unten für das hochkant gehaltene, links jeweils zwei Seiten auf einmal, rechts eine halbe nach der anderen. Die Wahl gilt für alle Stücke.</p>
-          <ul>
-            <li><strong>Zwei Seiten nebeneinander</strong>, wie auf dem Notenpult, auf dem quer gehaltenen iPad. Hochkant liegen zwei quer gedruckte Seiten übereinander.</li>
-            <li><strong>Halbseitig</strong>: Auf dem quer gehaltenen iPad füllt eine Seite die ganze Breite und wird in zwei Hälften gezeigt, erst oben, dann unten. Dazwischen lässt sie sich mit einem Finger nach oben oder unten ziehen. Halbseitig ersetzt dabei die zwei Seiten nebeneinander.</li>
-            <li><strong>Seitenwechsel in zwei Schritten</strong>: Auf dem hochkant gehaltenen iPad erscheint der Anfang der nächsten Seite oben, über dem bereits gespielten Teil, während unten die aktuelle Seite stehen bleibt. Wo sich die beiden treffen, lässt sich an der Linie am rechten Rand verschieben.</li>
-            <li>Eine einzelne quer gescannte Seite in einem Heft, etwa eine Ausklappseite, wird für sich gezeigt; die übrigen bleiben paarweise.</li>
-            <li><span class="ui">«Wärmeres Licht»</span> legt stufenlos einen warmen Ton über die Seite, etwa für den Abend.</li>
+          <p>Unter <svg class="ico" role="img" aria-label="Mehr"><use href="#i-more"/></svg> › <span class="ui">«Darstellung»</span> lassen sich verschiedene Modi wählen, wie die Seiten eines Dokuments auf dem Bildschirm dargestellt werden. Die Wahl gilt für alle Stücke.</p>
+          <ul class="pictured">
+            <li><img src="../screenshots/darstellung-quer-zwei.webp" width="232" height="234" alt=""> <span>Auf dem quer gehaltenen iPad werden zwei hochformatige Seiten nebeneinander dargestellt.</span></li>
+            <li><img src="../screenshots/darstellung-quer-halb.webp" width="232" height="234" alt=""> <span>Auf dem quer gehaltenen iPad wird eine hochformatige Seite in zwei Hälften über die ganze Breite dargestellt.</span></li>
+            <li><img src="../screenshots/darstellung-hoch-zwei.webp" width="232" height="234" alt=""> <span>Auf dem hochkant gehaltenen iPad werden zwei querformatige Seiten übereinander dargestellt.</span></li>
+            <li><img src="../screenshots/darstellung-hoch-halb.webp" width="232" height="234" alt=""> <span>Auf dem hochkant gehaltenen iPad werden Seitenwechsel in zwei Schritten ausgeführt. Der Anfang der nächsten Seite erscheint oben, während unten die aktuelle Seite stehen bleibt. Die Trennlinie lässt sich am rechten Rand verschieben.</span></li>
           </ul>
-
-          <h4 id="neu-anordnen">Neu anordnen</h4>
-          <p>Ein Scan kommt selten so, wie er gebraucht wird: verdreht, mit überflüssigen Seiten oder mit der Wiederholung hinter einem Seitenwechsel. Unter <svg class="ico" role="img" aria-label="Mehr"><use href="#i-more"/></svg> › <span class="ui">«Neu anordnen»</span> erscheinen alle Seiten des Stücks als Kacheln, um das zu ordnen.</p>
-          <ul>
-            <li>Unter jeder Seite lässt sie sich entfernen, nach links oder rechts drehen oder duplizieren. Eine verdoppelte Seite erspart etwa bei einer Wiederholung das Zurückblättern.</li>
-            <li>Seiten lassen sich an einen anderen Platz ziehen. Ein Tippen zeigt eine Seite gross.</li>
-            <li><svg class="ico" role="img" aria-label="Plus"><use href="#i-plus"/></svg> zwischen den Seiten fügt Seiten ein: leere aus den <span class="ui">«Vorlagen»</span> oder Seiten eines anderen Stücks aus der <span class="ui">«Bibliothek»</span>.</li>
-            <li>In der Werkzeugleiste lassen sich alle Seiten auf einmal drehen. Mit <svg class="ico" role="img" aria-label="Rückgängig"><use href="#i-undo"/></svg> und <svg class="ico" role="img" aria-label="Wiederherstellen"><use href="#i-redo"/></svg> lassen sich einzelne Schritte rückgängig machen und wiederherstellen, mit <svg class="ico" role="img" aria-label="Zurücksetzen"><use href="#i-reset"/></svg> alle Änderungen auf einmal zurücksetzen.</li>
-            <li><span class="ui">«Speichern»</span> ersetzt die Datei, nach einer Rückfrage. <span class="ui">«Speichern unter…»</span> legt stattdessen eine Kopie an. Anmerkungen wandern mit ihren Seiten mit.</li>
-          </ul>
-
-          <h4 id="zuschneiden">Zuschneiden</h4>
-          <p>Unter <svg class="ico" role="img" aria-label="Mehr"><use href="#i-more"/></svg> › <span class="ui">«Zuschneiden»</span> lassen sich die Ränder eines Scans wegschneiden, damit die Noten den Bildschirm füllen.</p>
-          <ul>
-            <li>Die Seite liegt hinter einem Fenster: Was darin zu sehen ist, bleibt. Mit einem Finger lässt sich die Seite verschieben, mit zwei vergrössern oder verkleinern.</li>
-            <li>Mit dem Regler unter dem Fenster lässt sich eine schief gescannte Seite gerade drehen. <svg class="ico" role="img" aria-label="Gerade drehen"><use href="#i-straight"/></svg> blendet ihn ein oder aus.</li>
-            <li><svg class="ico" role="img" aria-label="Automatisch zuschneiden"><use href="#i-crop-auto"/></svg> findet die Noten auf der Seite und schneidet mit einem schmalen Rand zu. Wie breit der Rand bleibt, lässt sich unter <svg class="ico" role="img" aria-label="Regler"><use href="#i-sliders"/></svg> einstellen.</li>
-            <li><svg class="ico" role="img" aria-label="Zurücksetzen"><use href="#i-reset"/></svg> stellt die Seite wieder her, wie sie war.</li>
-            <li><span class="ui">«Nur diese Seite»</span> in der Werkzeugleiste legt fest, wofür der Zuschnitt gilt: nur diese Seite, alle Seiten oder ausgewählte.</li>
-            <li><span class="ui">«Zuschneiden»</span> ersetzt die Datei, nach einer Rückfrage.</li>
-          </ul>
-
-          <h4 id="optimieren">Optimieren</h4>
-          <p>Manche Scans brauchen lange zum Umblättern, andere sind grau statt weiss. Unter <svg class="ico" role="img" aria-label="Mehr"><use href="#i-more"/></svg> › <span class="ui">«Optimieren»</span> wird jede Seite neu aufgebaut: Das Papier wird weiss, die Noten schwarz, und umgeblättert wird ohne Verzögerung. Meist wird die Datei dabei auch kleiner.</p>
-          <ul>
-            <li><span class="ui">«Grau»</span> passt für die meisten Scans. <span class="ui">«S/W»</span> ergibt die kleinsten und schnellsten Dateien und ist bei grauen Kopien oft schärfer als das Original. <span class="ui">«Farbe»</span> erhält farbige Stellen, etwa bei einem Faksimile. <span class="ui">«Original»</span> lässt die Seite, wie sie ist.</li>
-            <li>Darunter lassen sich Helligkeit, Kontrast (bei <span class="ui">«S/W»</span> die Stärke), <span class="ui">«Papier reinigen»</span>, Schärfe, Auflösung und Qualität einstellen.</li>
-            <li>Die Seite zeigt das Ergebnis. Solange sie oder <span class="ui">«Original»</span> gedrückt wird, ist das Original zu sehen. Wischen blättert zur nächsten Seite, zwei Finger vergrössern.</li>
-            <li><span class="ui">«Alle Seiten»</span> legt fest, welche Seiten optimiert werden: alle, nur diese oder ausgewählte. Seiten, die schon schnell sind, bleiben unverändert, solange unter <svg class="ico" role="img" aria-label="Mehr"><use href="#i-more"/></svg> die Option <span class="ui">«Schnelle Seiten unberührt lassen»</span> eingeschaltet ist.</li>
-            <li><span class="ui">«Optimieren»</span> ersetzt die Datei, nach einer Rückfrage. <span class="ui">«Speichern unter…»</span> legt stattdessen eine Kopie an. Da jede Seite zu einem Bild wird, lässt sich Text darin danach nicht mehr markieren.</li>
-          </ul>
+          <p>Mittels <span class="ui">«Wärmeres Licht»</span> lässt sich die Darstellung stufenlos wärmer färben, um die Augen zu schonen.</p>
         </section>
 
         <section aria-labelledby="anmerkungen">
           <h3 id="anmerkungen">Anmerkungen</h3>
-          <p>Anmerkungen werden direkt in die Noten geschrieben und für jede Schüler:in separat gespeichert. So trägt dasselbe Heft bei jeder Schüler:in ihre eigenen Fingersätze, und das PDF in der Bibliothek bleibt unverändert.</p>
+          <p>Anmerkungen werden direkt in die Noten geschrieben und für jede Schüler:in separat gespeichert. So trägt dasselbe Stück bei jeder Schüler:in ihre eigenen Anmerkungen, und das PDF in der Bibliothek bleibt unverändert. Entsprechend können in nicht zugeordneten Stücken keine Anmerkungen gemacht werden.</p>
           <figure class="shot shot--crop">
             <a href="../screenshots/anmerkungen.webp"><img src="../screenshots/anmerkungen.webp" width="1520" height="2020" loading="lazy" decoding="async" alt="Eine Partiturseite beim Schreiben: oben die Leiste mit Verwerfen, Seite 1 und Sichern, darunter vier Pinsel, Lineal, Auswahl, Radierer, Papierkorb, Rückgängig und Wiederherstellen; in den Noten rote Fingersätze und gelbe und violette Markierungen"></a>
           </figure>
           <ul>
-            <li>Anmerkungen gehören immer zu einer Schüler:in. Geschrieben werden sie in einem Stück, das aus ihrer Liste geöffnet wurde (siehe <a href="#zuordnen">Stücke zuordnen</a>).</li>
-            <li>Drei Wege führen hinein: <svg class="ico" role="img" aria-label="Stift"><use href="#i-pencil"/></svg> in der Werkzeugleiste, den Apple Pencil auf die Seite setzen (der erste Strich wird schon geschrieben) oder mit dem Finger eine halbe Sekunde auf die Seite drücken.</li>
-            <li><svg class="ico" role="img" aria-label="Häkchen"><use href="#i-check"/></svg> sichert die Anmerkungen. <svg class="ico" role="img" aria-label="Kreuz"><use href="#i-close"/></svg> verwirft sie, mit Rückfrage, falls sich etwas geändert hat.</li>
-            <li>Geblättert wird mit den Pfeilen neben der Seitenzahl.</li>
-            <li>Die Leiste lässt sich an jeder Stelle verschieben, die kein Knopf ist. Zur Seite gezogen, wird sie zu einem schmalen Streifen am Bildschirmrand, mit dem aktuellen Pinsel, dem Radierer, Rückgängig und der Seite.</li>
-            <li>Zwei Finger vergrössern die Seite auch hier, beim Schreiben bis aufs Achtfache, etwa für einen Fingersatz zwischen zwei Notenlinien.</li>
-            <li>Bei zwei Seiten nebeneinander lässt sich über beide hinweg schreiben.</li>
-            <li>Doppeltippen auf den Apple Pencil wirkt, wie es in den Einstellungen des iPads unter «Apple Pencil» festgelegt ist, etwa als Wechsel zwischen Pinsel und Radierer.</li>
-            <li>Mit <span class="ui">«Live»</span> erscheinen die Anmerkungen gleichzeitig auf einem zweiten Gerät (siehe <a href="#live">Live</a>).</li>
+            <li>Der Anmerkungen-Modus lässt sich über <svg class="ico" role="img" aria-label="Stift"><use href="#i-pencil"/></svg> in der Werkzeugleiste oder per Geste öffnen, standardmässig mit <span class="ui">«Tippen und halten»</span> (siehe <a href="#gesten">Einstellungen › Gesten</a>). Er öffnet sich auch von selbst, sobald mit dem Apple Pencil auf die Seite geschrieben wird.</li>
+            <li>Gespeichert wird erst mit <svg class="ico" role="img" aria-label="Häkchen"><use href="#i-check"/></svg>. Mit <svg class="ico" role="img" aria-label="Kreuz"><use href="#i-close"/></svg> werden alle Änderungen verworfen und der Anmerkungen-Modus beendet.</li>
+            <li>Mit <img class="pivot" src="../screenshots/blaettern.webp" width="320" height="73" alt="den Pfeilen neben der Seitenzahl"> kann geblättert werden.</li>
+            <li>Die Werkzeugleiste lässt sich frei verschieben. Zur Seite gezogen, wird sie zu einem schmalen Streifen am Bildschirmrand. Dieser lässt sich mittels langem Drücken auf ein Werkzeug personalisieren.</li>
           </ul>
 
-          <h4 id="pinsel">Pinsel</h4>
-          <p>Links in der Leiste stehen die Pinsel, jeder in seiner Farbe. Ein Tippen wählt einen Pinsel, ein zweites öffnet seine Einstellungen.</p>
+          <h4 id="pinsel">Pinsel und Werkzeuge</h4>
+          <p>In der Werkzeugleiste stehen beliebig viele Pinsel sowie weitere Werkzeuge zur Verfügung. Ein zweites Tippen auf einen Pinsel, die Auswahl oder den Radierer öffnet dessen Einstellungen.</p>
+          <figure class="shot shot--crop" style="--shot: 1 / 1">
+            <a href="../screenshots/pinsel.webp"><img src="../screenshots/pinsel.webp" width="1520" height="2020" loading="lazy" decoding="async" alt="Die Seite beim Schreiben mit den Einstellungen des gelben Leuchtstifts: Vorschau, Grösse 22, Farbton, Sättigung, Helligkeit, Deckkraft, «Überlagerung» auf «Aus», darunter «Duplizieren» und «Löschen»"></a>
+          </figure>
           <ul>
-            <li>Einstellbar sind Grösse, Farbton, Sättigung, Helligkeit und Deckkraft.</li>
-            <li>Ein durchscheinender Pinsel wirkt wie ein Leuchtstift: Die Noten darunter bleiben schwarz, und mehrfaches Übermalen macht ihn nicht dunkler. Mit <span class="ui">«Überlagerung»</span> deckt er stattdessen wie Farbe, Schicht um Schicht, bis die Noten darunter verschwinden.</li>
-            <li><svg class="ico" role="img" aria-label="Plus"><use href="#i-plus"/></svg> fügt einen Pinsel hinzu. In seinen Einstellungen lässt er sich duplizieren oder löschen; in der Leiste lassen sich die Pinsel durch Ziehen umordnen.</li>
-          </ul>
-
-          <h4 id="lineal">Lineal</h4>
-          <p><svg class="ico" role="img" aria-label="Lineal"><use href="#i-ruler"/></svg> legt ein Lineal auf die Seite. Ein Strich, der am Lineal beginnt, wird gerade, etwa für einen Taktstrich oder eine Gabel; einer, der anderswo beginnt, bleibt frei.</p>
-          <ul>
-            <li>Mit einem Finger lässt sich das Lineal verschieben, mit zwei drehen. Beim Drehen wird der Winkel angezeigt; waagrecht, senkrecht und die Diagonalen rasten ein.</li>
-            <li>Ein Strich, der auf das Lineal trifft, läuft an seiner Kante entlang. So enden etwa mehrere Gabeln bündig.</li>
-            <li>Das Lineal bleibt liegen, während die Seite darunter vergrössert, verschoben oder umgeblättert wird.</li>
-            <li>Ein weiteres Tippen auf <svg class="ico" role="img" aria-label="Lineal"><use href="#i-ruler"/></svg> nimmt das Lineal wieder weg.</li>
-          </ul>
-
-          <h4 id="auswahl">Auswahl</h4>
-          <p>Mit <svg class="ico" role="img" aria-label="Lasso"><use href="#i-lasso"/></svg> lassen sich Anmerkungen einkreisen, um sie zu verschieben, zu kopieren oder anzupassen. Ein zweites Tippen öffnet die Einstellungen.</p>
-          <ul>
-            <li><span class="ui">«Form»</span>: <span class="ui">«Freiform»</span> oder <span class="ui">«Rechteck»</span>. <span class="ui">«Umfang»</span>: <span class="ui">«Ganze Striche»</span> nimmt jeden berührten Strich ganz, <span class="ui">«Fläche»</span> nur den Teil innerhalb der Form, etwa einen halben Bogen.</li>
-            <li>Mit einem Finger lässt sich die Auswahl verschieben, mit zwei drehen und vergrössern.</li>
-            <li>Mit den Knöpfen über der Auswahl lässt sie sich duplizieren, kopieren, ausschneiden oder anpassen: Grösse und Farbe aller ausgewählten Striche auf einmal.</li>
-            <li>Kopiertes wird mit einem Tippen eingefügt, auch auf einer anderen Seite oder auf dem <a href="#whiteboard">Whiteboard</a>. Es lässt sich dann behalten, an die ursprüngliche Stelle setzen oder verwerfen.</li>
-          </ul>
-
-          <h4 id="radierer">Radierer</h4>
-          <p>Auch <svg class="ico" role="img" aria-label="Radierer"><use href="#i-eraser"/></svg> wird mit einem Tippen gewählt und mit einem zweiten eingestellt.</p>
-          <ul>
-            <li><span class="ui">«Ganze Striche»</span> entfernt jeden berührten Strich ganz. <span class="ui">«Fläche»</span> radiert wie ein Radiergummi, in der eingestellten Grösse.</li>
-            <li><svg class="ico" role="img" aria-label="Papierkorb"><use href="#i-trash"/></svg> leert die Seite. Sind zwei Seiten zu sehen, lässt sich wählen, welche.</li>
-            <li>Mit <svg class="ico" role="img" aria-label="Rückgängig"><use href="#i-undo"/></svg> und <svg class="ico" role="img" aria-label="Wiederherstellen"><use href="#i-redo"/></svg> lassen sich einzelne Schritte rückgängig machen und wiederherstellen, auch über das Umblättern hinweg.</li>
+            <li>Ist die Deckkraft kleiner als 100&nbsp;%, lässt sich die <span class="ui">«Überlagerung»</span> ein- oder ausschalten. Steht sie auf <span class="ui">«Aus»</span>, verhält sich der Pinsel wie ein Leuchtstift und überdeckt den Hintergrund nie. Steht sie auf <span class="ui">«Ein»</span>, überdeckt er den Hintergrund, und seine Deckkraft kumuliert sich mit jedem neuen Pinselstrich.</li>
+            <li><svg class="ico" role="img" aria-label="Lineal"><use href="#i-ruler"/></svg> legt ein Lineal auf die Seite, das gerade Striche ermöglicht.</li>
+            <li>Mit <svg class="ico" role="img" aria-label="Lasso"><use href="#i-lasso"/></svg> lassen sich Anmerkungen auswählen, um sie zu verschieben, zu drehen, zu kopieren oder anzupassen.</li>
+            <li><svg class="ico" role="img" aria-label="Radierer"><use href="#i-eraser"/></svg> entfernt ganze Striche oder radiert wie ein Radiergummi.</li>
+            <li><svg class="ico" role="img" aria-label="Papierkorb"><use href="#i-trash"/></svg> leert die Seite, <svg class="ico" role="img" aria-label="Rückgängig"><use href="#i-undo"/></svg> und <svg class="ico" role="img" aria-label="Wiederherstellen"><use href="#i-redo"/></svg> machen einzelne Schritte rückgängig oder stellen sie wieder her.</li>
           </ul>
         </section>
 
         <section aria-labelledby="werkzeuge">
-          <h3 id="werkzeuge">Werkzeuge</h3>
-          <p>Ist die Werkzeugleiste eingeblendet, stehen unten links das Stimmgerät und unten rechts das Metronom. Whiteboard und Klaviatur sind unter <svg class="ico" role="img" aria-label="Mehr"><use href="#i-more"/></svg> › <span class="ui">«Werkzeuge»</span>. Unter <a href="#gesten">Einstellungen › Gesten</a> lassen sie sich auch auf eine Geste legen.</p>
-          <figure class="shot shot--crop" style="--shot: 1 / 1; --at: 100%">
-            <a href="../screenshots/werkzeuge.webp"><img src="../screenshots/werkzeuge.webp" width="1680" height="2100" loading="lazy" decoding="async" alt="Stimmgerät und Metronom über den Noten: das Stimmgerät im Ton auf a¹, das Metronom auf 96 im Viervierteltakt"></a>
-          </figure>
+          <h3 id="werkzeuge">Musikalische Werkzeuge</h3>
 
           <h4 id="metronom">Metronom</h4>
           <p>Ein Tippen auf <svg class="ico" role="img" aria-label="Metronom"><use href="#i-metronome"/></svg> öffnet das Metronom. Langes Drücken startet oder stoppt es, ohne es zu öffnen.</p>
+          <figure class="shot shot--crop" style="--shot: 1 / 1; --at: 100%">
+            <a href="../screenshots/metronom.webp"><img src="../screenshots/metronom.webp" width="1520" height="2020" loading="lazy" decoding="async" alt="Das Metronom über der «Sérénade sous Bois»: oben «Takt» mit 4, darunter das Tempo 96 zwischen Minus und Plus, neben dem gehaltenen Plus die Optionen +5 und +10; darunter der Drehregler mit «Tippen» und unten «Aus», «Hörbar», «Sichtbar» und «Beides»"></a>
+          </figure>
           <ul>
-            <li>Das Tempo lässt sich auf mehrere Arten ändern: den Drehregler drehen, auf die Skala darum herum tippen oder entlangfahren, die Zahl antippen und eintippen, oder mit − und +. Von − oder + weg gewischt, ändert es sich um fünf (zur Seite) oder um zehn (nach oben).</li>
+            <li>Das Tempo lässt sich auf mehrere Arten ändern: den Drehregler drehen, auf die Skala darum herum tippen, die Zahl antippen und per Tastatur eingeben, oder mit <svg class="ico" role="img" aria-label="Minus"><use href="#i-minus"/></svg> und <svg class="ico" role="img" aria-label="Plus"><use href="#i-plus"/></svg>. Wird <svg class="ico" role="img" aria-label="Minus"><use href="#i-minus"/></svg> oder <svg class="ico" role="img" aria-label="Plus"><use href="#i-plus"/></svg> gehalten, erscheinen Optionen, um das Tempo in Fünfer- oder Zehnerschritten anzupassen. Dazu den Button auf die gewünschte Option ziehen.</li>
             <li>Mehrmaliges Tippen auf den Drehregler (<span class="ui">«Tippen»</span>) übernimmt das getippte Tempo.</li>
-            <li><span class="ui">«Takt»</span> legt die Schläge pro Takt fest, bis zwanzig.</li>
-            <li>Unten: <span class="ui">«Aus»</span>, <span class="ui">«Hörbar»</span>, <span class="ui">«Sichtbar»</span> oder <span class="ui">«Beides»</span>. <span class="ui">«Sichtbar»</span> lässt den Bildschirmrand im Takt aufleuchten, gut zu sehen aus dem Augenwinkel.</li>
+            <li><span class="ui">«Takt»</span> legt die Schläge pro Takt fest.</li>
+            <li>Das Metronom kann entweder <span class="ui">«Hörbar»</span>, <span class="ui">«Sichtbar»</span> oder <span class="ui">«Beides»</span> laufen. <span class="ui">«Sichtbar»</span> lässt den Bildschirmrand im Takt aufleuchten.</li>
             <li>Bei einem zugeordneten Stück merkt sich das Metronom Tempo und Takt, für jede Schüler:in einzeln.</li>
             <li>Unter <svg class="ico" role="img" aria-label="Regler"><use href="#i-sliders"/></svg> lassen sich die Farbe für <span class="ui">«Sichtbar»</span> und das Verhalten des Drehreglers einstellen.</li>
-            <li>Wird die App verlassen, pausiert das Metronom und läuft beim Zurückkehren weiter.</li>
           </ul>
 
           <h4 id="stimmgeraet">Stimmgerät</h4>
-          <p>Ein Tippen auf <svg class="ico" role="img" aria-label="Stimmgabel"><use href="#i-fork"/></svg> öffnet das Stimmgerät. <span class="ui">«Stimmgerät»</span> zeigt, welcher Ton gespielt wird und wie weit er danebenliegt; <span class="ui">«Stimmton»</span> spielt einen Ton zum Einstimmen.</p>
+          <p>Ein Tippen auf <svg class="ico" role="img" aria-label="Stimmgabel"><use href="#i-fork"/></svg> öffnet das Stimmgerät.</p>
+          <figure class="shot shot--crop" style="--shot: 1 / 1; --at: 100%">
+            <a href="../screenshots/stimmgeraet.webp"><img src="../screenshots/stimmgeraet.webp" width="1520" height="2020" loading="lazy" decoding="async" alt="Das Stimmgerät über der «Sérénade sous Bois»: oben «Kammerton» 440 und «Transposition» C, in der Mitte a¹ mit der Nadel auf 0, unten «Stimmgerät» und «Stimmton», daneben Auge und Regler"></a>
+          </figure>
           <ul>
-            <li>Die Nadel zeigt die Abweichung in Cent. Stimmt der Ton, färbt sich die Anzeige.</li>
-            <li>Der <span class="ui">«Kammerton»</span> lässt sich von 415 bis 466 Hz einstellen.</li>
-            <li><span class="ui">«Transposition»</span> ist für transponierende Instrumente: Angezeigt wird der notierte Ton, für eine Klarinette in B also h¹, wo a¹ erklingt.</li>
-            <li><svg class="ico" role="img" aria-label="Auge"><use href="#i-eye"/></svg> lässt das Stimmgerät nach dem Schliessen über den Noten stehen, um beim Spielen zu stimmen. Langes Drücken auf <svg class="ico" role="img" aria-label="Stimmgabel"><use href="#i-fork"/></svg> tut dasselbe direkt.</li>
-            <li><span class="ui">«Stimmton»</span> zeigt die zwölf Töne im Kreis; ▶ in der Mitte spielt den gewählten.</li>
-            <li>Unter <svg class="ico" role="img" aria-label="Regler"><use href="#i-sliders"/></svg> lassen sich unter anderem Mikrofonempfindlichkeit, Präzision, Farbe, die Grösse über den Noten und die Notennamen (H · Ais oder B · A♯) einstellen, und ob die Töne des Stimmtons chromatisch oder im Quintenzirkel stehen.</li>
+            <li><svg class="ico" role="img" aria-label="Auge"><use href="#i-eye"/></svg> blendet das Stimmgerät dauerhaft über den Noten ein. Dies lässt sich auch per langem Drücken auf <svg class="ico" role="img" aria-label="Stimmgabel"><use href="#i-fork"/></svg> aktivieren und deaktivieren.</li>
+            <li>Mittels <span class="ui">«Stimmton»</span> kann ein beliebiger Stimmton abgespielt werden.</li>
+            <li>Unter <svg class="ico" role="img" aria-label="Regler"><use href="#i-sliders"/></svg> lassen sich die Mikrofonempfindlichkeit sowie Darstellungsoptionen anpassen.</li>
             <li>Das Mikrofon ist nur eingeschaltet, solange das Stimmgerät zu sehen ist.</li>
           </ul>
 
           <h4 id="klaviatur">Klaviatur</h4>
-          <p><svg class="ico" role="img" aria-label="Mehr"><use href="#i-more"/></svg> › <span class="ui">«Klaviatur»</span> legt eine Klaviatur mit 88 Tasten an den unteren Bildschirmrand, um einen Ton vorzuspielen oder einen Akkord zu halten, auch wo kein Klavier steht.</p>
+          <p><svg class="ico" role="img" aria-label="Mehr"><use href="#i-more"/></svg> › <span class="ui">«Klaviatur»</span> legt eine Klaviatur mit 88 Tasten an den unteren Bildschirmrand.</p>
+          <figure class="shot shot--crop" style="--shot: 4 / 3; --at: 100%">
+            <a href="../screenshots/klaviatur.webp"><img src="../screenshots/klaviatur.webp" width="1520" height="2020" loading="lazy" decoding="async" alt="Die Klaviatur am unteren Rand der «Sérénade sous Bois», ein C-Dur-Akkord gedrückt; darüber ihre Leiste mit Kreuz, Regler, Bildlaufleiste, Minus und Plus und dem Griff für die Höhe"></a>
+          </figure>
           <ul>
-            <li>Ein Ton klingt, solange die Taste gedrückt ist; mehrere Tasten klingen zusammen.</li>
-            <li>Mit der Leiste über den Tasten lässt sich durch die Klaviatur fahren, mit − und + die Breite der Tasten ändern.</li>
-            <li>Unter <svg class="ico" role="img" aria-label="Regler"><use href="#i-sliders"/></svg> lassen sich Notennamen, Oktaven und Kammerton einstellen.</li>
-            <li>Die Noten bleiben, wo sie sind; die Klaviatur deckt den unteren Teil der Seite ab.</li>
-            <li><svg class="ico" role="img" aria-label="Kreuz"><use href="#i-close"/></svg> schliesst die Klaviatur.</li>
+            <li>Mit der Leiste über den Tasten lässt sich durch die Klaviatur navigieren.</li>
+            <li>Mit <svg class="ico" role="img" aria-label="Minus"><use href="#i-minus"/></svg> und <svg class="ico" role="img" aria-label="Plus"><use href="#i-plus"/></svg> lässt sich die Breite der Tasten ändern.</li>
+            <li>Mit <svg class="ico" role="img" aria-label="Pfeile nach oben und unten"><use href="#i-grip"/></svg> lässt sich die Höhe der Klaviatur anpassen.</li>
           </ul>
 
           <h4 id="whiteboard">Whiteboard</h4>
@@ -614,12 +552,82 @@ Dienstag
           </figure>
           <ul>
             <li>Pinsel, Lineal, Auswahl und Radierer funktionieren wie bei den <a href="#anmerkungen">Anmerkungen</a>.</li>
-            <li><span class="ui">«Linien»</span> bietet <span class="ui">«Leer»</span>, <span class="ui">«Textlinien»</span> oder <span class="ui">«Notenlinien»</span>, mit einstellbarer Dicke, Abstand und Grösse.</li>
-            <li><svg class="ico" role="img" aria-label="Klaviatur"><use href="#i-piano"/></svg> öffnet auch hier die Klaviatur, <svg class="ico" role="img" aria-label="Teilen"><use href="#i-share"/></svg> teilt das Whiteboard als PDF.</li>
-            <li><svg class="ico" role="img" aria-label="Kreuz"><use href="#i-close"/></svg> schliesst das Whiteboard. Was darauf steht, bleibt bis zum nächsten Mal; <svg class="ico" role="img" aria-label="Papierkorb"><use href="#i-trash"/></svg> leert es.</li>
+            <li><svg class="ico" role="img" aria-label="Linien"><use href="#i-lines"/></svg> bietet <span class="ui">«Leer»</span>, <span class="ui">«Textlinien»</span> oder <span class="ui">«Notenlinien»</span>, mit einstellbarer Dicke, Abstand und Grösse.</li>
+            <li><svg class="ico" role="img" aria-label="Klaviatur"><use href="#i-piano"/></svg> öffnet die Klaviatur.</li>
+            <li><svg class="ico" role="img" aria-label="Teilen"><use href="#i-share"/></svg> teilt das Whiteboard als PDF.</li>
+            <li><svg class="ico" role="img" aria-label="Kreuz"><use href="#i-close"/></svg> schliesst das Whiteboard. Was darauf steht, bleibt bis zum nächsten Mal.</li>
+            <li><svg class="ico" role="img" aria-label="Papierkorb"><use href="#i-trash"/></svg> leert das Whiteboard.</li>
             <li>Das Whiteboard gehört keiner Schüler:in. Was darauf steht, bleibt von den Anmerkungen in den Noten getrennt.</li>
           </ul>
         </section>
+
+        <section aria-labelledby="dateiwerkzeuge">
+          <h3 id="dateiwerkzeuge">Dateiwerkzeuge</h3>
+
+          <h4 id="neu-anordnen">Neu anordnen</h4>
+          <p>Unter <svg class="ico" role="img" aria-label="Mehr"><use href="#i-more"/></svg> › <span class="ui">«Neu anordnen»</span> lassen sich die Seiten eines Stücks umstellen, drehen, duplizieren, entfernen und ergänzen.</p>
+          <figure class="shot">
+            <a href="../screenshots/neu-anordnen.webp"><img src="../screenshots/neu-anordnen.webp" width="2020" height="1520" loading="lazy" decoding="async" alt="Alle Seiten von «Hanon — Der Klaviervirtuose» als Kacheln: der rote Umschlag, die zweite Seite quer gedreht, die vierte verdoppelt; unter jeder Seite Löschen, Drehen und Duplizieren, zwischen den Seiten Plus; oben «Speichern unter…» und «Speichern»"></a>
+          </figure>
+          <ul>
+            <li>Mit <svg class="ico" role="img" aria-label="Papierkorb"><use href="#i-trash"/></svg>, <svg class="ico" role="img" aria-label="Nach links drehen"><use href="#i-turn-left"/></svg>, <svg class="ico" role="img" aria-label="Nach rechts drehen"><use href="#i-turn-right"/></svg> und <svg class="ico" role="img" aria-label="Duplizieren"><use href="#i-copy"/></svg> unter jeder Seite lässt sie sich entfernen, drehen oder duplizieren.</li>
+            <li>Seiten lassen sich durch Ziehen verschieben. Ein Tippen zeigt eine Seite gross.</li>
+            <li><svg class="ico" role="img" aria-label="Plus"><use href="#i-plus"/></svg> zwischen den Seiten fügt leere Seiten aus den <span class="ui">«Vorlagen»</span> oder Seiten eines anderen Stücks aus der <span class="ui">«Bibliothek»</span> ein.</li>
+            <li>Mit <svg class="ico" role="img" aria-label="Nach links drehen"><use href="#i-turn-left"/></svg> und <svg class="ico" role="img" aria-label="Nach rechts drehen"><use href="#i-turn-right"/></svg> in der Werkzeugleiste lassen sich alle Seiten auf einmal drehen.</li>
+            <li><svg class="ico" role="img" aria-label="Rückgängig"><use href="#i-undo"/></svg> und <svg class="ico" role="img" aria-label="Wiederherstellen"><use href="#i-redo"/></svg> machen einzelne Schritte rückgängig oder stellen sie wieder her, <svg class="ico" role="img" aria-label="Zurücksetzen"><use href="#i-reset"/></svg> setzt alle Änderungen zurück.</li>
+            <li><span class="ui">«Speichern»</span> ersetzt die Datei nach einer Rückfrage, <span class="ui">«Speichern unter…»</span> legt eine Kopie an. Anmerkungen bleiben bei ihren Seiten.</li>
+          </ul>
+
+          <h4 id="zuschneiden">Zuschneiden</h4>
+          <p>Unter <svg class="ico" role="img" aria-label="Mehr"><use href="#i-more"/></svg> › <span class="ui">«Zuschneiden»</span> lassen sich Seitenränder wegschneiden und schiefe Seiten gerade drehen.</p>
+          <figure class="shot">
+            <a href="../screenshots/zuschneiden.webp"><img src="../screenshots/zuschneiden.webp" width="2020" height="1520" loading="lazy" decoding="async" alt="Ein grauer, schief eingescannter Bogen der «Sérénade sous Bois» beim Zuschneiden: die Seite mit dem Raster beim Geradedrehen, darunter der Regler; unten «Nur diese Seite», oben «Zuschneiden»"></a>
+          </figure>
+          <ul>
+            <li>Was im Fenster zu sehen ist, bleibt erhalten. Mit einem Finger lässt sich die Seite verschieben, mit zwei vergrössern oder verkleinern.</li>
+            <li>Mit dem Regler unter dem Fenster lässt sich die Seite drehen. <svg class="ico" role="img" aria-label="Gerade drehen"><use href="#i-straight"/></svg> blendet den Regler ein oder aus.</li>
+            <li><svg class="ico" role="img" aria-label="Automatisch zuschneiden"><use href="#i-crop-auto"/></svg> schneidet automatisch auf die Noten zu. Die Breite des verbleibenden Rands lässt sich unter <svg class="ico" role="img" aria-label="Regler"><use href="#i-sliders"/></svg> einstellen.</li>
+            <li><svg class="ico" role="img" aria-label="Rückgängig"><use href="#i-undo"/></svg> und <svg class="ico" role="img" aria-label="Wiederherstellen"><use href="#i-redo"/></svg> machen einzelne Schritte rückgängig oder stellen sie wieder her, <svg class="ico" role="img" aria-label="Zurücksetzen"><use href="#i-reset"/></svg> setzt die Seite zurück.</li>
+            <li>Mit <span class="ui">«Nur diese Seite»</span> lässt sich wählen, wofür der Zuschnitt gilt: <span class="ui">«Nur diese Seite»</span>, <span class="ui">«Alle Seiten»</span> oder <span class="ui">«Seiten auswählen…»</span>.</li>
+            <li><span class="ui">«Zuschneiden»</span> ersetzt die Datei nach einer Rückfrage.</li>
+          </ul>
+
+          <h4 id="optimieren">Optimieren</h4>
+          <p>Unter <svg class="ico" role="img" aria-label="Mehr"><use href="#i-more"/></svg> › <span class="ui">«Optimieren»</span> lassen sich PDFs, die nur langsam umblättern, beschleunigen.</p>
+          <figure class="shot">
+            <a href="../screenshots/optimieren.webp"><img src="../screenshots/optimieren.webp" width="2020" height="1520" loading="lazy" decoding="async" alt="Die gescannte Seite der «Sérénade sous Bois» beim Optimieren mit «Grau»: das Papier weiss, die Noten schwarz; unten «Original», «Farbe», «Grau» und «S/W», die Regler und die Grösse von 784 kB auf ca. 356 kB"></a>
+          </figure>
+          <ul>
+            <li><span class="ui">«Original»</span> lässt die Seite unverändert, <span class="ui">«Farbe»</span> erhält farbige Stellen, <span class="ui">«Grau»</span> ergibt Graustufen und <span class="ui">«S/W»</span> reines Schwarzweiss mit den kleinsten Dateien.</li>
+            <li>Zudem lassen sich Helligkeit, Kontrast (bei <span class="ui">«S/W»</span> die Stärke), <span class="ui">«Papier reinigen»</span>, Schärfe, Auflösung und Qualität einstellen.</li>
+            <li>Die Seite zeigt eine Vorschau des Ergebnisses. Solange die Seite oder <span class="ui">«Original»</span> gedrückt wird, ist das Original zu sehen. Unten stehen die Grösse der Datei und die Dauer eines Seitenwechsels, vorher und nachher.</li>
+            <li>Mit <span class="ui">«Alle Seiten»</span> lässt sich wählen, welche Seiten optimiert werden: <span class="ui">«Alle Seiten»</span>, <span class="ui">«Nur diese Seite»</span> oder <span class="ui">«Seiten auswählen…»</span>. Ist unter <svg class="ico" role="img" aria-label="Mehr"><use href="#i-more"/></svg> <span class="ui">«Schnelle Seiten unberührt lassen»</span> eingeschaltet, bleiben bereits schnelle Seiten unverändert.</li>
+            <li><span class="ui">«Optimieren»</span> ersetzt die Datei nach einer Rückfrage, <span class="ui">«Speichern unter…»</span> legt eine Kopie an. Optimierte Seiten werden zu Bildern, Text darin lässt sich danach nicht mehr markieren.</li>
+          </ul>
+        </section>
+      </section>
+
+      <section aria-labelledby="zuordnen">
+        <h2 id="zuordnen">Stücke zuordnen</h2>
+        <p>Es gibt drei verschiedene Möglichkeiten, Noten einer Schüler:in zuzuordnen. Dabei entsteht immer ein Eintrag mit einer definierten Startseite in den <a href="#aktuelle-stuecke">Aktuellen Stücken</a> der Schüler:in. Es lassen sich auch mehrere Versionen derselben Originaldatei einer Schüler:in zuordnen.</p>
+
+        <h3 id="zuordnen-notenansicht">In der Notenansicht</h3>
+        <p>Zur gewünschten Seite blättern, <svg class="ico" role="img" aria-label="Person mit Plus"><use href="#i-person-plus"/></svg> in der Werkzeugleiste antippen und die Schüler:in wählen. Die angezeigte Seite wird zur Startseite. Danach lässt sich diesem Eintrag unter <a href="#aktuelle-stuecke">Aktuelle Stücke</a> ein eigener Name vergeben.</p>
+        <figure class="shot shot--crop" style="--shot: 1 / 1">
+          <a href="../screenshots/zuordnen.webp"><img src="../screenshots/zuordnen.webp" width="1520" height="2020" loading="lazy" decoding="async" alt="Die zweite Seite der «Sérénade sous Bois» in der Notenansicht, darüber das Fenster «Zu Aktuelle Stücke hinzufügen»: «Chrétien — Sérénade sous Bois» ab Seite 2 zuordnen, darunter die Schüler:innen mit Tag und Uhrzeit ihrer Lektion"></a>
+        </figure>
+
+        <h3 id="zuordnen-seite">Auf der Seite der Schüler:in</h3>
+        <p><svg class="ico" role="img" aria-label="Plus"><use href="#i-plus"/></svg> neben «Aktuelle Stücke» öffnet die Notenbibliothek. Ein Tippen auf ein Stück zeigt seine Seiten, um die Startseite zu wählen. Mit langem Drücken kann eine grosse Vorschau einer Seite geöffnet werden. Mit <svg class="ico" role="img" aria-label="Mehrere auswählen"><use href="#i-select"/></svg> lassen sich mehrere Stücke auf einmal hinzufügen.</p>
+        <figure class="shot shot--crop">
+          <a href="../screenshots/zuordnen-seite.webp"><img src="../screenshots/zuordnen-seite.webp" width="1520" height="2020" loading="lazy" decoding="async" alt="Die Seite einer Schülerin unter «Aktuelle Stücke», darüber die zwei Seiten der «Sérénade sous Bois» zur Wahl der Startseite, die erste mit dem Lesezeichen gewählt, oben «Hinzufügen»"></a>
+        </figure>
+
+        <h3 id="zuordnen-bibliothek">In der Notenbibliothek</h3>
+        <p><svg class="ico" role="img" aria-label="Mehr"><use href="#i-more"/></svg> › <span class="ui">«Zu Schüler:in hinzufügen»</span> am Ende einer Zeile ordnet ein Stück zu. Es beginnt dann auf Seite 1 und trägt den Namen der Datei.</p>
+        <figure class="shot shot--crop" style="--shot: 15 / 14">
+          <a href="../screenshots/zuordnen-bibliothek.webp"><img src="../screenshots/zuordnen-bibliothek.webp" width="1520" height="2020" loading="lazy" decoding="async" alt="Die Notenbibliothek mit dem Fenster «Zu Aktuelle Stücke hinzufügen»: «Bach — Inventionen und Sinfonien» zuordnen, darunter die Schüler:innen mit Tag und Uhrzeit ihrer Lektion"></a>
+        </figure>
       </section>
 
       <section aria-labelledby="einstellungen">
