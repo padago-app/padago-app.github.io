@@ -85,6 +85,12 @@
     <rect x="4" y="4" width="16" height="16" rx="2.2"/>
     <path d="M10.629 15.249A2 1.5 -20 0 1 9.263 17.343A2 1.5 -20 0 1 6.871 16.618A2 1.5 -20 0 1 8.237 14.524A2 1.5 -20 0 1 10.629 15.249ZM16.629 14.049A2 1.5 -20 0 1 15.263 16.143A2 1.5 -20 0 1 12.871 15.418A2 1.5 -20 0 1 14.237 13.324A2 1.5 -20 0 1 16.629 14.049ZM8.948 15.645V8.575a.875 .875 0 0 1 1.75 0v7.07a.875 .875 0 0 1-1.75 0ZM14.948 14.445V7.375a.875 .875 0 0 1 1.75 0v7.07a.875 .875 0 0 1-1.75 0ZM9.652 7.717 15.652 6.517a.875 .875 0 0 1 .343 1.716l-6 1.2a.875 .875 0 0 1-.343-1.716Z" fill="currentColor" stroke="none"/>
   </symbol>
+  <symbol id="i-folder" viewBox="0 0 24 24">
+    <path d="M3.6 18V6a2 2 0 0 1 2-2h3.7l2 2.4h7.1a2 2 0 0 1 2 2v9.6a2 2 0 0 1-2 2H5.6a2 2 0 0 1-2-2z"/>
+  </symbol>
+  <symbol id="i-file" viewBox="0 0 24 24">
+    <rect x="5.4" y="3.4" width="13.2" height="17.2" rx="2.2"/>
+  </symbol>
   <symbol id="i-folder-plus" viewBox="0 0 24 24">
     <path d="M3.6 18V6a2 2 0 0 1 2-2h3.7l2 2.4h7.1a2 2 0 0 1 2 2v9.6a2 2 0 0 1-2 2H5.6a2 2 0 0 1-2-2z"/>
     <path d="M12 10.6v5.2M9.4 13.2h5.2"/>
@@ -158,6 +164,20 @@
     <path d="M3.125 7.6H6M12.8 7.6h8.075M3.125 16.4H11.6M18.4 16.4h2.475" stroke-linecap="butt"/>
     <circle cx="9.4" cy="7.6" r="3.4" fill="currentColor" stroke="none"/>
     <circle cx="15" cy="16.4" r="3.4" fill="currentColor" stroke="none"/>
+  </symbol>
+  <symbol id="i-gear" viewBox="0 0 24 24">
+    <path d="M18.06 10.26 20.41 10.21 20.41 13.79 18.06 13.74 16.53 16.38 17.75 18.39 14.66 20.18 13.52 18.11 10.48 18.11 9.34 20.18 6.25 18.39 7.47 16.38 5.94 13.74 3.59 13.79 3.59 10.21 5.94 10.26 7.47 7.62 6.25 5.61 9.34 3.82 10.48 5.89 13.52 5.89 14.66 3.82 17.75 5.61 16.53 7.62Z"/>
+    <circle cx="12" cy="12" r="2.6"/>
+  </symbol>
+  <symbol id="i-sync" viewBox="0 0 24 24">
+    <path d="M20.6 12A8.6 8.6 0 0 0 6 5.9L3.4 8.4M3.4 3.6v4.8h4.8"/>
+    <path d="M3.4 12a8.6 8.6 0 0 0 14.6 6.1l2.6-2.5M20.6 20.4v-4.8h-4.8"/>
+  </symbol>
+  <symbol id="i-screen" viewBox="0 0 24 24">
+    <path d="M7.6 16.6H5.2a1.8 1.8 0 0 1-1.8-1.8V6.2a1.8 1.8 0 0 1 1.8-1.8h13.6a1.8 1.8 0 0 1 1.8 1.8v8.6a1.8 1.8 0 0 1-1.8 1.8h-2.4M12 14.2l3.6 5.6H8.4z"/>
+  </symbol>
+  <symbol id="i-laser" viewBox="0 0 24 24">
+    <path d="M3.8 20.2 14.64 9.36M16.2 5.6V2.8M17.76 6.24l1.98-1.98M18.4 7.8h2.8M17.76 9.36l1.98 1.98M16.2 10v2.8M14 7.8h-2.8M14.64 6.24l-1.98-1.98M18.4 7.8a2.2 2.2 0 1 1-4.4 0a2.2 2.2 0 1 1 4.4 0z"/>
   </symbol>
   <symbol id="i-piano" viewBox="0 0 24 24">
     <path d="M4.4 5.4h15.2a1.4 1.4 0 0 1 1.4 1.4v10.4a1.4 1.4 0 0 1-1.4 1.4H4.4a1.4 1.4 0 0 1-1.4-1.4V6.8a1.4 1.4 0 0 1 1.4-1.4z"/>
@@ -429,6 +449,9 @@ Dienstag
             <li>Mit <svg class="ico" role="img" aria-label="Plus"><use href="#i-plus"/></svg> › <svg class="ico" role="img" aria-label="Vorlagen"><use href="#i-paper-ruled"/></svg> <span class="ui">«Vorlagen»</span> lassen sich neue PDFs aus leeren Seiten, Textlinien oder Notenpapier erstellen.</li>
             <li>Auch aus anderen Apps lassen sich PDF-Dateien über das Teilen-Menü von iPadOS an padago senden.</li>
           </ul>
+          <figure class="shot shot--crop" style="--shot: 3 / 2; --at: 50%">
+            <a href="../screenshots/vorlagen.webp"><img src="../screenshots/vorlagen.webp" width="1520" height="2020" loading="lazy" decoding="async" alt="Das Fenster «Vorlagen» über der Notenbibliothek: «Leere Seite», «Textlinien» und das gewählte «Notenlinien», darunter die Anzahl Blätter und Hoch- oder Querformat, oben «Speichern»"></a>
+          </figure>
         </section>
 
         <section aria-labelledby="notenansicht">
@@ -546,16 +569,16 @@ Dienstag
           </ul>
 
           <h4 id="whiteboard">Whiteboard</h4>
-          <p>Das Whiteboard ist eine leere Seite zum Erklären und Skizzieren. Es öffnet über <svg class="ico" role="img" aria-label="Mehr"><use href="#i-more"/></svg> › <span class="ui">«Whiteboard»</span>, in der Notenansicht wie im Stundenplan.</p>
+          <p>Das Whiteboard ist eine leere Seite zum Erklären und Skizzieren. Es öffnet über <svg class="ico" role="img" aria-label="Mehr"><use href="#i-more"/></svg> › <span class="ui">«Whiteboard»</span>, in der Notenansicht sowie im Stundenplan.</p>
           <figure class="shot shot--crop">
             <a href="../screenshots/whiteboard.webp"><img src="../screenshots/whiteboard.webp" width="1520" height="2020" loading="lazy" decoding="async" alt="Das Whiteboard mit Notenlinien und zwei von Hand skizzierten Tonleitern mit ihren Ganz- und Halbtonschritten: D-Dur im Violinschlüssel, h-Moll im Bassschlüssel"></a>
           </figure>
           <ul>
             <li>Pinsel, Lineal, Auswahl und Radierer funktionieren wie bei den <a href="#anmerkungen">Anmerkungen</a>.</li>
-            <li><svg class="ico" role="img" aria-label="Linien"><use href="#i-lines"/></svg> bietet <span class="ui">«Leer»</span>, <span class="ui">«Textlinien»</span> oder <span class="ui">«Notenlinien»</span>, mit einstellbarer Dicke, Abstand und Grösse.</li>
+            <li>Mittels <svg class="ico" role="img" aria-label="Linien"><use href="#i-lines"/></svg> lassen sich <span class="ui">«Textlinien»</span> oder <span class="ui">«Notenlinien»</span>, mit einstellbarer Dicke, Abstand und Grösse als Hintergrund einstellen.</li>
             <li><svg class="ico" role="img" aria-label="Klaviatur"><use href="#i-piano"/></svg> öffnet die Klaviatur.</li>
             <li><svg class="ico" role="img" aria-label="Teilen"><use href="#i-share"/></svg> teilt das Whiteboard als PDF.</li>
-            <li><svg class="ico" role="img" aria-label="Kreuz"><use href="#i-close"/></svg> schliesst das Whiteboard. Was darauf steht, bleibt bis zum nächsten Mal.</li>
+            <li><svg class="ico" role="img" aria-label="Kreuz"><use href="#i-close"/></svg> schliesst das Whiteboard. Der Inhalt bleibt bis zum nächsten öffnen bestehen.</li>
             <li><svg class="ico" role="img" aria-label="Papierkorb"><use href="#i-trash"/></svg> leert das Whiteboard.</li>
             <li>Das Whiteboard gehört keiner Schüler:in. Was darauf steht, bleibt von den Anmerkungen in den Noten getrennt.</li>
           </ul>
@@ -571,11 +594,11 @@ Dienstag
           </figure>
           <ul>
             <li>Mit <svg class="ico" role="img" aria-label="Papierkorb"><use href="#i-trash"/></svg>, <svg class="ico" role="img" aria-label="Nach links drehen"><use href="#i-turn-left"/></svg>, <svg class="ico" role="img" aria-label="Nach rechts drehen"><use href="#i-turn-right"/></svg> und <svg class="ico" role="img" aria-label="Duplizieren"><use href="#i-copy"/></svg> unter jeder Seite lässt sie sich entfernen, drehen oder duplizieren.</li>
-            <li>Seiten lassen sich durch Ziehen verschieben. Ein Tippen zeigt eine Seite gross.</li>
-            <li><svg class="ico" role="img" aria-label="Plus"><use href="#i-plus"/></svg> zwischen den Seiten fügt leere Seiten aus den <span class="ui">«Vorlagen»</span> oder Seiten eines anderen Stücks aus der <span class="ui">«Bibliothek»</span> ein.</li>
+            <li>Seiten lassen sich durch Ziehen verschieben. Mittels Tippen lässt sich eine grosse Vorschau einer Seite öffnen.</li>
+            <li>Mittels <svg class="ico ico--disc" role="img" aria-label="Plus"><use href="#i-plus"/></svg> lassen sich zwischen den Seiten leere Seiten aus den <span class="ui">«Vorlagen»</span> oder Seiten eines anderen Stücks aus der <span class="ui">«Bibliothek»</span> einfügen.</li>
             <li>Mit <svg class="ico" role="img" aria-label="Nach links drehen"><use href="#i-turn-left"/></svg> und <svg class="ico" role="img" aria-label="Nach rechts drehen"><use href="#i-turn-right"/></svg> in der Werkzeugleiste lassen sich alle Seiten auf einmal drehen.</li>
             <li><svg class="ico" role="img" aria-label="Rückgängig"><use href="#i-undo"/></svg> und <svg class="ico" role="img" aria-label="Wiederherstellen"><use href="#i-redo"/></svg> machen einzelne Schritte rückgängig oder stellen sie wieder her, <svg class="ico" role="img" aria-label="Zurücksetzen"><use href="#i-reset"/></svg> setzt alle Änderungen zurück.</li>
-            <li><span class="ui">«Speichern»</span> ersetzt die Datei nach einer Rückfrage, <span class="ui">«Speichern unter…»</span> legt eine Kopie an. Anmerkungen bleiben bei ihren Seiten.</li>
+            <li><span class="ui">«Speichern»</span> ersetzt die Datei, <span class="ui">«Speichern unter…»</span> legt eine Kopie an. Anmerkungen bleiben bei ihren Seiten.</li>
           </ul>
 
           <h4 id="zuschneiden">Zuschneiden</h4>
@@ -589,20 +612,19 @@ Dienstag
             <li><svg class="ico" role="img" aria-label="Automatisch zuschneiden"><use href="#i-crop-auto"/></svg> schneidet automatisch auf die Noten zu. Die Breite des verbleibenden Rands lässt sich unter <svg class="ico" role="img" aria-label="Regler"><use href="#i-sliders"/></svg> einstellen.</li>
             <li><svg class="ico" role="img" aria-label="Rückgängig"><use href="#i-undo"/></svg> und <svg class="ico" role="img" aria-label="Wiederherstellen"><use href="#i-redo"/></svg> machen einzelne Schritte rückgängig oder stellen sie wieder her, <svg class="ico" role="img" aria-label="Zurücksetzen"><use href="#i-reset"/></svg> setzt die Seite zurück.</li>
             <li>Mit <span class="ui">«Nur diese Seite»</span> lässt sich wählen, wofür der Zuschnitt gilt: <span class="ui">«Nur diese Seite»</span>, <span class="ui">«Alle Seiten»</span> oder <span class="ui">«Seiten auswählen…»</span>.</li>
-            <li><span class="ui">«Zuschneiden»</span> ersetzt die Datei nach einer Rückfrage.</li>
           </ul>
 
           <h4 id="optimieren">Optimieren</h4>
-          <p>Unter <svg class="ico" role="img" aria-label="Mehr"><use href="#i-more"/></svg> › <span class="ui">«Optimieren»</span> lassen sich PDFs, die nur langsam umblättern, beschleunigen.</p>
+          <p>Unter <svg class="ico" role="img" aria-label="Mehr"><use href="#i-more"/></svg> › <span class="ui">«Optimieren»</span> lassen sich PDFs, die nur langsam umblättern, beschleunigen oder sehr grosse PDFs komprimieren.</p>
           <figure class="shot">
             <a href="../screenshots/optimieren.webp"><img src="../screenshots/optimieren.webp" width="2020" height="1520" loading="lazy" decoding="async" alt="Die gescannte Seite der «Sérénade sous Bois» beim Optimieren mit «Grau»: das Papier weiss, die Noten schwarz; unten «Original», «Farbe», «Grau» und «S/W», die Regler und die Grösse von 784 kB auf ca. 356 kB"></a>
           </figure>
           <ul>
-            <li><span class="ui">«Original»</span> lässt die Seite unverändert, <span class="ui">«Farbe»</span> erhält farbige Stellen, <span class="ui">«Grau»</span> ergibt Graustufen und <span class="ui">«S/W»</span> reines Schwarzweiss mit den kleinsten Dateien.</li>
-            <li>Zudem lassen sich Helligkeit, Kontrast (bei <span class="ui">«S/W»</span> die Stärke), <span class="ui">«Papier reinigen»</span>, Schärfe, Auflösung und Qualität einstellen.</li>
-            <li>Die Seite zeigt eine Vorschau des Ergebnisses. Solange die Seite oder <span class="ui">«Original»</span> gedrückt wird, ist das Original zu sehen. Unten stehen die Grösse der Datei und die Dauer eines Seitenwechsels, vorher und nachher.</li>
-            <li>Mit <span class="ui">«Alle Seiten»</span> lässt sich wählen, welche Seiten optimiert werden: <span class="ui">«Alle Seiten»</span>, <span class="ui">«Nur diese Seite»</span> oder <span class="ui">«Seiten auswählen…»</span>. Ist unter <svg class="ico" role="img" aria-label="Mehr"><use href="#i-more"/></svg> <span class="ui">«Schnelle Seiten unberührt lassen»</span> eingeschaltet, bleiben bereits schnelle Seiten unverändert.</li>
-            <li><span class="ui">«Optimieren»</span> ersetzt die Datei nach einer Rückfrage, <span class="ui">«Speichern unter…»</span> legt eine Kopie an. Optimierte Seiten werden zu Bildern, Text darin lässt sich danach nicht mehr markieren.</li>
+            <li>In der Werkzeugleiste unten lassen sich verschiedene visuelle Parameter einstellen. Die Anzeige zeigt eine Vorschau der aktuellen Einstellungen. Mittels <span class="ui ui--pill">Original</span> lassen sie sich mit dem Original vergleichen.</li>
+            <li>Unten links findet sich eine Schätzung der Dokumentgrösse und Geschwindigkeit des Blätterns im Vergleich zum Original.</li>
+            <li>Mit <span class="ui">«Alle Seiten»</span> lässt sich wählen, welche Seiten optimiert werden: <span class="ui">«Alle Seiten»</span>, <span class="ui">«Nur diese Seite»</span> oder <span class="ui">«Seiten auswählen…»</span>.</li>
+            <li>Unter <svg class="ico" role="img" aria-label="Mehr"><use href="#i-more"/></svg> finden sich drei Schalter, alle standardmässig eingeschaltet. <span class="ui">«Schnelle Seiten unberührt lassen»</span> übernimmt Seiten ohne Bild mit höchstens 8000 Zeichenbefehlen unverändert. Das sind meist am Computer gesetzte Noten, die bereits schnell und scharf sind. <span class="ui">«Eigene Kompression behalten»</span> speichert eingescannte Seiten in ihrer bisherigen Kompression, ohne weiteren Qualitätsverlust. <span class="ui">«Qualität»</span> ist dann ausgegraut. Ausgeschaltet wird jede Seite mit der gewählten Qualität neu komprimiert: kleiner, aber mit zusätzlichem Verlust. <span class="ui">«Flecken entfernen»</span> wirkt nur bei <span class="ui">«S/W»</span>.</li>
+            <li><span class="ui">«Optimieren»</span> ersetzt die Datei, <span class="ui">«Speichern unter…»</span> legt eine Kopie an.</li>
           </ul>
         </section>
       </section>
@@ -635,27 +657,98 @@ Dienstag
 
         <section aria-labelledby="allgemein">
           <h3 id="allgemein">Allgemein</h3>
-          <p class="todo">Folgt.</p>
+          <p>Die Einstellungen öffnen sich mit <svg class="ico" role="img" aria-label="Zahnrad"><use href="#i-gear"/></svg> in der Werkzeugleiste. Unter <span class="ui">«Allgemein»</span> lassen sich das Aussehen der App und die Lektions-Fortschrittsanzeige einstellen. Beides gilt für den Notizen- wie für den Noten-Bereich.</p>
+          <figure class="shot shot--crop" style="--shot: 8 / 5">
+            <a href="../screenshots/einstellungen-allgemein.webp"><img src="../screenshots/einstellungen-allgemein.webp" width="2020" height="1520" loading="lazy" decoding="async" alt="Die Einstellungen unter «Allgemein»: unter «Anzeige» die sieben Akzentfarben und das Farbfeld, «Thema» und «Bildschirm wach halten»; darunter die Lektions-Fortschrittsanzeige mit «Anzeigen», «Über Noten im Vollbild anzeigen», «Dicke» und «Farbe»"></a>
+          </figure>
+
+          <h4 id="anzeige">Anzeige</h4>
+          <ul>
+            <li>Als <span class="ui">«Akzentfarbe»</span> stehen sieben Farben zur Wahl, über das Farbfeld daneben auch jede beliebige eigene. Die Farbe wird automatisch so abgestimmt, dass sie im hellen wie im dunklen Thema gut lesbar bleibt.</li>
+            <li>Mit <span class="ui">«Bildschirm wach halten»</span> lässt sich die automatische Bildschirmsperre deaktivieren, solange die App (<span class="ui">«Überall»</span>) bzw. die <a href="#notenansicht">Notenansicht</a> (<span class="ui">«Nur Noten»</span>) geöffnet ist.</li>
+          </ul>
+
+          <h4 id="fortschrittsanzeige">Lektions-Fortschrittsanzeige</h4>
+          <p>Wenn eingeschaltet, zeigt eine fortschreitende Linie unter der Werkzeugleiste den zeitlichen Fortschritt einer laufenden Lektion auf der <a href="#seite">Seite der Schüler:in</a> und über ihren Noten. Sie erscheint nur, wenn für den Termin eine Dauer eingetragen ist.</p>
+          <ul>
+            <li>Ist <span class="ui">«Über Noten im Vollbild anzeigen»</span> eingeschaltet, bleibt sie in der Notenansicht am oberen Bildschirmrand sichtbar, auch wenn das Menü ausgeblendet ist.</li>
+            <li>Ist die Lektion vorbei, bleibt die Linie noch zehn Minuten lang voll stehen und verschwindet dann.</li>
+          </ul>
         </section>
 
         <section aria-labelledby="einstellungen-notizen">
           <h3 id="einstellungen-notizen">Notizen</h3>
-          <p class="todo">Folgt.</p>
+          <p>Unter <span class="ui">«Notizen»</span> › «Schuljahr» lässt sich mit <span class="ui">«Beginnt am»</span> der Beginn des Schuljahrs festlegen. Dies beeinflusst die Einteilung unter <a href="#verlauf">Alle Notizen</a>. Beginnt das Schuljahr am 1. Januar, entspricht es dem Kalenderjahr und heisst «SJ 26» statt «SJ 25-26».</p>
+          <figure class="shot shot--crop" style="--shot: 5 / 2">
+            <a href="../screenshots/einstellungen-notizen.webp"><img src="../screenshots/einstellungen-notizen.webp" width="2020" height="1520" loading="lazy" decoding="async" alt="Die Einstellungen unter «Notizen»: «Schuljahr» beginnt am 1. August, darunter «Notizen ab dem 1. August gehören zu SJ 26-27.» und die Gesten des Notizen-Bereichs"></a>
+          </figure>
+          <p>Die Gesten für den Notizen-Bereich sind unter <a href="#gesten">Gesten</a> beschrieben.</p>
         </section>
 
         <section aria-labelledby="einstellungen-noten">
           <h3 id="einstellungen-noten">Noten</h3>
-          <p class="todo">Folgt.</p>
+          <p>Unter <span class="ui">«Noten»</span> › «Blättern» lässt sich das Verhalten beim Blättern in der <a href="#notenansicht">Notenansicht</a> anpassen.</p>
+          <figure class="shot shot--crop" style="--shot: 7 / 3">
+            <a href="../screenshots/einstellungen-noten.webp"><img src="../screenshots/einstellungen-noten.webp" width="2020" height="1520" loading="lazy" decoding="async" alt="Die Einstellungen unter «Noten» › «Blättern»: «Umblättern mit» auf «Tippen», «Animation» auf «Ohne» mit der Dauer darunter, «Zwei Seiten nebeneinander» auf «Zwei Seiten» und «Über das Stück hinaus» auf «Aus»"></a>
+          </figure>
+          <ul>
+            <li><span class="ui">«Umblättern mit»</span> regelt, welche Gesten zum Umblättern akzeptiert werden:
+              <ul>
+                <li><span class="ui">«Tippen»</span> auf das rechte oder linke Drittel der Seite.</li>
+                <li>Eine Wischbewegung (<span class="ui">«Wischen»</span>) nach links oder rechts, irgendwo auf der Seite.</li>
+                <li><span class="ui">«Beides»</span>.</li>
+              </ul>
+              Mit <span class="ui">«Wischen»</span> allein öffnet jedes Tippen das Menü. Auf einer vergrösserten Seite und mit dem Apple Pencil ist das Blättern durch Wischen nicht möglich.</li>
+            <li><span class="ui">«Zwei Seiten nebeneinander»</span>: Stehen in der <a href="#darstellung">Darstellung</a> zwei Seiten nebeneinander, blättert <span class="ui">«Zwei Seiten»</span> beide um wie in einem Buch. <span class="ui">«Eine Seite»</span> rückt jeweils um eine Seite weiter, sodass die zuletzt gelesene Seite sichtbar bleibt.</li>
+            <li><span class="ui">«Über das Stück hinaus»</span>: Bei zugeordneten Stücken blättert <span class="ui">«Schüler:in»</span> nach der letzten Seite weiter zum nächsten Stück unter <a href="#aktuelle-stuecke">Aktuelle Stücke</a>. <span class="ui">«Alle»</span> blättert nach dem letzten Stück einer Schüler:in weiter zum ersten Stück der nächsten Schüler:in im Stundenplan. Jedes Stück öffnet auf seiner Startseite, auch beim Zurückblättern.</li>
+            <li>Die Gesten für den Noten-Bereich sind unter <a href="#gesten">Gesten</a> beschrieben.</li>
+          </ul>
         </section>
 
         <section aria-labelledby="gesten">
           <h3 id="gesten">Gesten</h3>
-          <p class="todo">Folgt.</p>
+          <p>Häufig gebrauchte Funktionen lassen sich mit Gesten aktivieren. Die Gesten werden für jeden Bereich separat festgelegt: unter <span class="ui">«Notizen»</span> › «Gesten» für den Notizen-Bereich und unter <span class="ui">«Noten»</span> › «Gesten» für den Noten-Bereich. So kann beispielsweise dieselbe Geste im Notizen-Bereich die aktuelle Lektion öffnen, im Noten-Bereich aber das Metronom.</p>
+          <figure class="shot">
+            <a href="../screenshots/gesten.webp"><img src="../screenshots/gesten.webp" width="2020" height="1520" loading="lazy" decoding="async" alt="Die Gesten des Noten-Bereichs mit dem geöffneten Menü für «Mit drei Fingern halten»: zuoberst «Nichts», darunter die Gruppen «Wechseln» und «Über den Noten öffnen» mit ihren Funktionen"></a>
+          </figure>
+          <ul>
+            <li>Gesten mit einem Finger wirken nicht auf Buttons und Textfeldern, in der Notenbibliothek und beim Bearbeiten des Stundenplans.</li>
+            <li>Nicht aktiv sind die Gesten:
+              <ul>
+                <li>Über einem geöffneten Fenster.</li>
+                <li>Im Stundenplaner.</li>
+                <li>Beim Schreiben von Anmerkungen.</li>
+                <li>Im Whiteboard.</li>
+                <li>Beim Neu anordnen, Zuschneiden und Optimieren.</li>
+              </ul></li>
+            <li><span class="ui">«Doppeltippen»</span> wirkt in der Notenansicht nur im mittleren Drittel der Seite. Da bereits das erste Tippen das Menü öffnet, stehen dafür nur Funktionen zur Wahl, die etwas über den Noten öffnen.</li>
+            <li>Wird <span class="ui">«Menü öffnen»</span> mit <span class="ui">«Doppeltippen»</span> verknüpft, lässt sich das Menü in der Notenansicht nicht mehr mittels einfachem Tippen im mittleren Drittel öffnen.</li>
+          </ul>
         </section>
 
         <section aria-labelledby="exportieren">
           <h3 id="exportieren">Exportieren</h3>
-          <p class="todo">Folgt.</p>
+          <p>Unter <span class="ui">«Exportieren»</span> lassen sich Stundenplan, Notizen und Repertoirelisten als Dateien weitergeben und alle Daten als Backup sichern. Die Dateien werden über das Teilen-Menü von iPadOS weitergegeben. Werden mehrere Dateien auf einmal exportiert, werden sie als ZIP-Archiv zusammengefasst.</p>
+          <figure class="shot shot--crop" style="--shot: 11 / 7">
+            <a href="../screenshots/exportieren.webp"><img src="../screenshots/exportieren.webp" width="2020" height="1520" loading="lazy" decoding="async" alt="Die Seite «Exportieren»: unter «Stundenplan» die Tage Di und Do und «Ohne Termin», jeder mit der Anzahl Lektionen, und «Als PDF»; unter «Notizen» 3 von 14 Schüler:innen vom 01.08.2026 bis 31.01.2027, «Pro Schüler:in» und die Buttons «Als Markdown» und «Als PDF»"></a>
+          </figure>
+          <ul>
+            <li>In der Auswahl der Schüler:innen wirken <span class="ui">«Alle»</span> und <span class="ui">«Keine»</span> auf das Suchergebnis. So lassen sich etwa alle Geschwister über den Nachnamen auswählen.</li>
+            <li>Die Repertoireliste umfasst die aktuellen und die archivierten Stücke.</li>
+          </ul>
+
+          <h4 id="backup">Backup</h4>
+          <figure class="shot shot--crop" style="--shot: 3 / 1; --at: 100%">
+            <a href="../screenshots/backup.webp"><img src="../screenshots/backup.webp" width="2020" height="1520" loading="lazy" decoding="async" alt="Unter «Backup» der Umfang «Alles» und die Buttons «Teilen», «In Dateien sichern» und «Backup einspielen»; darunter «Einstellungen» mit «Als JSON» und «Importieren»"></a>
+          </figure>
+          <ul>
+            <li>Mit Cloud-Anbindung enthält das Backup nur, was auf dem iPad liegt. Ist <span class="ui">«Offline verfügbar»</span> auf <span class="ui">«Begrenzt»</span> gestellt, fehlen darin die Noten, die nur in der Cloud liegen.</li>
+            <li><span class="ui">«Backup einspielen»</span> steht nur zur Verfügung, wenn als Speicherort <span class="ui">«Nur auf dem Gerät»</span> gewählt ist. Auf einem neu eingerichteten iPad erscheint es auch auf dem leeren Stundenplan.</li>
+            <li>Vorhandene Daten werden durch das Backup ersetzt. Enthält es nur Noten oder nur Notizen, bleibt der andere Teil unverändert.</li>
+          </ul>
+
+          <h4 id="einstellungen-datei">Einstellungen als Datei</h4>
+          <p>Mit <span class="ui">«Als JSON»</span> und <span class="ui">«Importieren»</span> lassen sich die Einstellungen übertragen. Speicherort, Cloud-Anbindung und Live bleiben dabei unverändert. Zugangsdaten zur Cloud sind nie in der Datei enthalten.</p>
         </section>
       </section>
 
@@ -665,17 +758,57 @@ Dienstag
         <section aria-labelledby="ordner">
           <h3 id="ordner">Der Ordner Padago</h3>
           <p>Alle Daten werden in einem Ordner auf dem iPad gespeichert, in der Dateien-App unter «Auf meinem iPad» › «padago» › «Padago». Dieser Ordner kann jederzeit aus padago heraus angezeigt werden: <span class="ui">«Einstellungen»</span> › <span class="ui">«Speicher»</span> › <span class="ui">«In Dateien zeigen»</span>.</p>
-          <p>Darin liegen zwei Unterordner:</p>
-          <ul>
-            <li><strong>Noten</strong>: die Notenbibliothek, als PDF-Dateien, beliebig in Unterordner geordnet.</li>
-            <li><strong>Notizen</strong>: ein Ordner pro Schüler:in mit den Notizen, den zugeordneten Stücken und den Anmerkungen. Dazu «Persönlich» für die persönlichen Notizen und «archiv» für archivierte Schüler:innen.</li>
+          <p>Er ist wie folgt aufgebaut:</p>
+          <ul class="tree">
+            <li><div><span><svg aria-hidden="true"><use href="#i-folder"/></svg>Padago</span></div>
+              <ul>
+                <li><div><span><svg aria-hidden="true"><use href="#i-folder"/></svg>Noten</span><small>die Notenbibliothek</small></div>
+                  <ul>
+                    <li><div><span><svg aria-hidden="true"><use href="#i-folder"/></svg>Klavier</span><small>Unterordner nach Belieben</small></div>
+                      <ul>
+                        <li><div><span><svg aria-hidden="true"><use href="#i-sheet"/></svg>Chrétien — Sérénade sous Bois.pdf</span></div></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><div><span><svg aria-hidden="true"><use href="#i-folder"/></svg>Notizen</span></div>
+                  <ul>
+                    <li><div><span><svg aria-hidden="true"><use href="#i-folder"/></svg>Fanny Farrenc</span><small>ein Ordner pro Schüler:in</small></div>
+                      <ul>
+                        <li><div><span><svg aria-hidden="true"><use href="#i-paper-ruled"/></svg>2026-08-21.md</span><small>die Notiz der Lektion vom 21. August</small></div></li>
+                        <li><div><span><svg aria-hidden="true"><use href="#i-paper-ruled"/></svg>2026-08-28.md</span></div></li>
+                        <li><div><span><svg aria-hidden="true"><use href="#i-file"/></svg>_pupil.json</span><small>die Termine</small></div></li>
+                        <li><div><span><svg aria-hidden="true"><use href="#i-file"/></svg>_pieces.json</span><small>die <a href="#aktuelle-stuecke">Aktuellen Stücke</a></small></div></li>
+                        <li><div><span><svg aria-hidden="true"><use href="#i-folder"/></svg>annotations</span><small>die <a href="#anmerkungen">Anmerkungen</a></small></div></li>
+                      </ul>
+                    </li>
+                    <li><div><span><svg aria-hidden="true"><use href="#i-folder"/></svg>Persönlich</span><small>die <a href="#persoenlich">persönlichen Notizen</a></small></div>
+                      <ul>
+                        <li><div><span><svg aria-hidden="true"><use href="#i-paper-ruled"/></svg>2026-09-11 14-23-05.md</span><small>angelegt am 11. September um 14:23</small></div></li>
+                      </ul>
+                    </li>
+                    <li><div><span><svg aria-hidden="true"><use href="#i-folder"/></svg>archiv</span><small>die <a href="#archiv">archivierten Schüler:innen</a></small></div>
+                      <ul>
+                        <li><div><span><svg aria-hidden="true"><use href="#i-folder"/></svg>Béla Boulanger</span></div></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
           </ul>
-          <p>Es sind gewöhnliche Dateien, lesbar auch ohne padago (siehe <a href="#dateien">Die Dateien ausserhalb von padago</a>).</p>
+          <p>Es sind gewöhnliche Dateien, lesbar auch ohne padago (siehe <a href="#dateien">Dateien direkt bearbeiten</a>).</p>
         </section>
 
         <section aria-labelledby="dateien">
-          <h3 id="dateien">Die Dateien ausserhalb von padago</h3>
-          <p class="todo">Folgt.</p>
+          <h3 id="dateien">Dateien direkt bearbeiten</h3>
+          <p>Die Dateien im Ordner Padago lassen sich auch ohne padago öffnen und bearbeiten, etwa in der Dateien-App, in Nextcloud oder am Computer. Was dort geändert wird, erscheint auch in padago.</p>
+          <ul>
+            <li>Notizen sind Markdown-Dateien und lassen sich mit jedem Texteditor lesen und bearbeiten.</li>
+            <li>Der Name eines Ordners unter «Notizen» ist der Name der Schüler:in. Wird der Ordner umbenannt, heisst auch die Schüler:in so. Ein von Hand angelegter Ordner erscheint als neue Schüler:in, ein nach «archiv» verschobener im <a href="#archiv">Archiv</a>.</li>
+            <li>Noten lassen sich im Ordner «Noten» frei ordnen, umbenennen und verschieben. Zugeordnete Stücke bleiben dabei zugeordnet, ihre Anmerkungen bleiben erhalten.</li>
+            <li>Die Anmerkungen liegen im Ordner der Schüler:in, nicht im PDF. Ein PDF mit Anmerkungen lässt sich in der <a href="#notenansicht">Notenansicht</a> mittels <svg class="ico" role="img" aria-label="Teilen"><use href="#i-share"/></svg> › <span class="ui">«PDF mit Anmerkungen»</span> teilen.</li>
+          </ul>
         </section>
       </section>
 
@@ -683,23 +816,89 @@ Dienstag
         <h2 id="synchronisation">Synchronisation</h2>
 
         <section aria-labelledby="speicherort">
-          <h3 id="speicherort">Speicherort: iPad oder Nextcloud</h3>
-          <p class="todo">Folgt.</p>
+          <h3 id="speicherort">Speicherort</h3>
+          <p>Unter <span class="ui">«Einstellungen»</span> › <span class="ui">«Speicher»</span> › <span class="ui">«Speicherort»</span> kann eine Cloud-Anbindung aktiviert werden.</p>
+          <figure class="shot shot--crop" style="--shot: 3 / 1">
+            <a href="../screenshots/einstellungen-speicher.webp"><img src="../screenshots/einstellungen-speicher.webp" width="2020" height="1920" loading="lazy" decoding="async" alt="Die Einstellungen unter «Speicher»: «Speicherort» auf «Cloud-Anbindung», unter «Cloud» der Anbieter Nextcloud, «Verbunden»; darunter «Offline verfügbar» auf «Begrenzt» und die Geräte unter «Live»"></a>
+          </figure>
+          <ul>
+            <li>Auch mit Cloud-Anbindung liegen alle Daten im <a href="#ordner">Ordner Padago</a> auf dem iPad. Der Ordner wird dabei mit der Cloud synchronisiert, sodass mehrere Geräte mit denselben Daten arbeiten.</li>
+            <li>Als Cloud wird derzeit Nextcloud unterstützt (siehe <a href="#nextcloud">Nextcloud verbinden</a>).</li>
+            <li>Beim Wechsel zur Cloud-Anbindung werden Ordner und Cloud zusammengeführt: Was nur auf einer Seite liegt, kommt auf die andere. Wo sich eine Datei unterscheidet, gilt die neuere. Die ältere bleibt erhalten: bei Notizen im Versionsverlauf von Nextcloud, bei Noten als «… (Kopie).pdf».</li>
+            <li>Beim Wechsel zurück zu <span class="ui">«Nur auf dem Gerät»</span> wird nachgefragt. Die Daten bleiben auf dem iPad, die Anmeldung bleibt gespeichert. So lässt sich die Cloud-Anbindung später mit einem Tippen wieder aufnehmen.</li>
+          </ul>
         </section>
 
         <section aria-labelledby="nextcloud">
           <h3 id="nextcloud">Nextcloud verbinden</h3>
-          <p class="todo">Folgt.</p>
+          <p>Für die Cloud-Anbindung wird ein Konto auf einem Nextcloud-Server benötigt, etwa einem eigenen oder einem gemieteten.</p>
+          <ol>
+            <li>In Nextcloud unter «Einstellungen» › «Sicherheit» › «Geräte &amp; Sitzungen» ein neues App-Passwort erstellen, etwa mit dem Namen «iPad padago». Nextcloud zeigt es nur einmal an.</li>
+            <li>In padago unter <span class="ui">«Einstellungen»</span> › <span class="ui">«Speicher»</span> <span class="ui">«Cloud-Anbindung»</span> wählen und <span class="ui">«Konfigurieren»</span> antippen.</li>
+            <li><span class="ui">«Server-URL»</span>, <span class="ui">«Benutzername»</span> (der Anmeldename, nicht der angezeigte Name) und <span class="ui">«App-Passwort»</span> eintragen.</li>
+            <li>Mit <span class="ui">«Prüfen und verbinden»</span> bestätigen. Das Fenster schliesst sich, unter <span class="ui">«Anbieter»</span> steht <span class="ui">«Verbunden»</span>.</li>
+          </ol>
+          <ul>
+            <li>Der Ordner Padago wird beim ersten Verbinden in der Nextcloud angelegt. Unter <span class="ui">«Ordner»</span> lässt sich ein anderer Name wählen.</li>
+            <li>Noten lassen sich auch direkt in Nextcloud in den Ordner «Noten» hochladen, etwa vom Computer aus. Sie erscheinen nach der nächsten Synchronisierung in der <a href="#notenbibliothek">Notenbibliothek</a>.</li>
+            <li>Für jedes Gerät empfiehlt sich ein eigenes App-Passwort. So lässt sich ein verlorenes iPad sperren, ohne die anderen Geräte neu anzumelden.</li>
+            <li><span class="ui">«Trennen»</span> im selben Fenster löscht die Anmeldung vom iPad. Die Daten auf dem iPad bleiben erhalten.</li>
+          </ul>
+
+          <h4 id="synchronisierung">Synchronisierung</h4>
+          <p>Mit aktiver Cloud-Anbindung erscheint <svg class="ico" role="img" aria-label="Synchronisierung"><use href="#i-sync"/></svg> in der Werkzeugleiste.</p>
+          <figure class="shot shot--crop" style="--shot: 3 / 2">
+            <a href="../screenshots/synchronisierung.webp"><img src="../screenshots/synchronisierung.webp" width="1520" height="2020" loading="lazy" decoding="async" alt="Der Synchronisierungs-Dialog unter dem Symbol in der Werkzeugleiste: «Alles synchronisiert.», «Zuletzt abgeglichen gerade eben.» und «Jetzt synchronisieren»; darunter «Live» eingeschaltet mit den Geräten «Flügel» (Verbunden), «Mac» (Suchen…) und «Zuhause» (Getrennt)"></a>
+          </figure>
+          <ul>
+            <li>Ein Tippen auf <svg class="ico" role="img" aria-label="Synchronisierung"><use href="#i-sync"/></svg> öffnet den Synchronisierungs-Dialog.</li>
+            <li>Wurde dieselbe Datei auf zwei Geräten geändert, werden die Änderungen zusammengeführt. Nur wo beide dieselbe Stelle geändert haben, gilt die neuere; die ältere bleibt im Versionsverlauf von Nextcloud erhalten. Der Synchronisierungs-Dialog nennt die betroffene Datei.</li>
+          </ul>
         </section>
 
         <section aria-labelledby="ohne-verbindung">
           <h3 id="ohne-verbindung">Ohne Verbindung</h3>
-          <p class="todo">Folgt.</p>
+          <p>Notizen, Stundenplan, Anmerkungen und alle offline verfügbaren Noten funktionieren auch ohne Internetverbindung. Änderungen werden auf dem iPad gespeichert und bei der nächsten Verbindung übertragen, auch wenn die App zwischendurch geschlossen wurde.</p>
+          <ul>
+            <li>Ohne Verbindung ist das Symbol durchgestrichen <img class="mark" src="../screenshots/sync-offline.webp" width="88" height="88" alt="(das Synchronisierungs-Symbol durchgestrichen, mit einer roten 1)">. Die rote Zahl nennt die noch nicht übertragenen Änderungen.</li>
+            <li>Mit <span class="ui">«Nur auf dem Gerät»</span> wird nie eine Verbindung benötigt.</li>
+          </ul>
+
+          <h4 id="offline-verfuegbar">Offline verfügbar</h4>
+          <p>Mit Cloud-Anbindung lässt sich unter <span class="ui">«Einstellungen»</span> › <span class="ui">«Speicher»</span> › <span class="ui">«Offline verfügbar»</span> wählen, welche Noten auf dem iPad liegen.</p>
+          <figure class="shot shot--crop" style="--shot: 4 / 1; --at: 35%">
+            <a href="../screenshots/einstellungen-speicher.webp"><img src="../screenshots/einstellungen-speicher.webp" width="2020" height="1920" loading="lazy" decoding="async" alt="«Offline verfügbar» auf «Begrenzt», «Speicher für Noten» 512 MB und «Übernehmen», darunter rot «6 Stücke (214 MB) werden entfernt.» und «Alle 24 Stücke offline verfügbar · 731 MB · 41,2 GB frei»"></a>
+          </figure>
+          <ul>
+            <li><span class="ui">«Alle Noten»</span> lädt die ganze Notenbibliothek auf das iPad, zuerst die zugeordneten Stücke, dann die zuletzt gespielten. Dabei bleiben mindestens 2&nbsp;GB auf dem iPad frei.</li>
+            <li><span class="ui">«Begrenzt»</span> beschränkt die Noten auf den unter <span class="ui">«Speicher für Noten»</span> angegebenen Platz. Zugeordnete Stücke bleiben immer offline verfügbar, andere geöffnete Stücke, solange der Platz reicht. Die übrigen werden beim Öffnen aus der Cloud geladen und sind ohne Verbindung nicht verfügbar.</li>
+            <li>Was dabei vom iPad entfernt würde, steht vorher in Rot. Entfernt wird es erst mit <span class="ui">«Übernehmen»</span>, in der Cloud bleibt es erhalten.</li>
+          </ul>
         </section>
 
         <section aria-labelledby="live">
           <h3 id="live">Live</h3>
-          <p class="todo">Folgt.</p>
+          <p>Live ermöglicht die Echtzeit-Synchronisation von <a href="#anmerkungen">Anmerkungen</a> auf andere Geräte. Live ist als <span class="ui">«Experimentell»</span> gekennzeichnet und auf jedem Gerät ausgeschaltet, bis es in den Einstellungen eingeschaltet wird.</p>
+          <figure class="shot shot--crop" style="--shot: 7 / 3; --at: 100%">
+            <a href="../screenshots/einstellungen-speicher.webp"><img src="../screenshots/einstellungen-speicher.webp" width="2020" height="1920" loading="lazy" decoding="async" alt="Unter «Speicher» die Überschrift «Live» mit «Experimentell» und dem Schalter auf «Ein», darunter der Hinweis zu Live, «Dieses Gerät» und die Geräte «Flügel», «Mac» und «Zuhause», jedes mit «Entfernen»"></a>
+          </figure>
+          <ol>
+            <li>Alle beteiligten Geräte mit derselben Cloud verbinden (siehe <a href="#nextcloud">Nextcloud verbinden</a>).</li>
+            <li>Auf jedem Gerät unter <span class="ui">«Einstellungen»</span> › <span class="ui">«Speicher»</span> den Schalter neben der Überschrift <span class="ui">«Live»</span> auf <span class="ui">«Ein»</span> stellen.</li>
+            <li>Im Synchronisierungs-Dialog (<svg class="ico" role="img" aria-label="Synchronisierung"><use href="#i-sync"/></svg>) <span class="ui">«Live»</span> einschalten.</li>
+          </ol>
+          <figure class="shot shot--crop" style="--shot: 3 / 2">
+            <a href="../screenshots/synchronisierung.webp"><img src="../screenshots/synchronisierung.webp" width="1520" height="2020" loading="lazy" decoding="async" alt="Der Synchronisierungs-Dialog mit «Live» eingeschaltet: «Flügel» verbunden, mit dem Symbol zum Öffnen des Bildschirms daneben, «Mac» wird gesucht, «Zuhause» ist getrennt"></a>
+          </figure>
+          <ul>
+            <li>Im Synchronisierungs-Dialog erscheinen dann die anderen Geräte. Ein Tippen auf ein Gerät nimmt es aus Live heraus oder wieder hinein.</li>
+            <li>Ein Punkt im Synchronisierungs-Symbol <img class="mark" src="../screenshots/sync-live-verbunden.webp" width="88" height="88" alt="(mit grünem Punkt in der Mitte)"> zeigt, dass ein Gerät verbunden ist, ein Ring <img class="mark" src="../screenshots/sync-live-suchen.webp" width="88" height="88" alt="(mit einem Ring in der Mitte)">, dass noch gesucht wird.</li>
+            <li>Im Anmerkungen-Modus stehen am Ende der Werkzeugleiste der Laserpointer und <span class="ui">«Live»</span> <img class="pivot" src="../screenshots/live-werkzeugleiste.webp" width="194" height="84" alt="(der Laserpointer und die grüne Taste «Live»)">. Mit <span class="ui">«Live»</span> lässt sich Live auch dort ein- und ausschalten. Die Spur des Laserpointers leuchtet auf allen Geräten kurz auf und wird nicht gespeichert.</li>
+            <li>Während Live eingeschaltet ist, werden Anmerkungen laufend gespeichert. <svg class="ico" role="img" aria-label="Kreuz"><use href="#i-close"/></svg> zum Verwerfen entfällt.</li>
+            <li>Langes Drücken auf <svg class="ico" role="img" aria-label="Synchronisierung"><use href="#i-sync"/></svg> öffnet den aktuellen Bildschirm auf den verbundenen Geräten: dasselbe Stück auf derselben Seite, die Seite derselben Schüler:in oder das Whiteboard. Für ein einzelnes Gerät steht dafür <svg class="ico" role="img" aria-label="Bildschirm"><use href="#i-screen"/></svg> neben dem Gerät im Synchronisierungs-Dialog.</li>
+            <li>Unter <span class="ui">«Einstellungen»</span> › <span class="ui">«Speicher»</span> › <span class="ui">«Live»</span> lässt sich unter <span class="ui">«Dieses Gerät»</span> der Name ändern, unter dem es auf den anderen Geräten erscheint. Mit <span class="ui">«Entfernen»</span> lässt sich ein anderes Gerät aus Live entfernen. Bei einem verlorenen iPad zuerst sein App-Passwort in Nextcloud widerrufen, dann <span class="ui">«Entfernen»</span>.</li>
+            <li>Wird der Schalter in den Einstellungen wieder auf <span class="ui">«Aus»</span> gestellt, wird Live beendet und das Gerät aus der Liste der anderen Geräte entfernt.</li>
+          </ul>
         </section>
       </section>
     </div>
